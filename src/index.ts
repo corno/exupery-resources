@@ -1,1 +1,1 @@
-import * as dummy from "path"
+export const x = 42
