@@ -14,8 +14,8 @@ export const $$ = (
     path: string,
     data: string,
     escape_spaces_in_path: boolean
-): _easync.Unsafe_Procedure_Context<D.Write_File_Error> => {
-    return _easync.__execute_unsafe_action({
+): _easync.Unguaranteed_Procedure_Context<D.Write_File_Error> => {
+    return _easync.__execute_unguaranteed_action({
         'execute': (on_success, on_exception) => {
 
             const fname = __possibly_escape_filename(path, escape_spaces_in_path)

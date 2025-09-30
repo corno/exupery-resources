@@ -9,8 +9,8 @@ import * as D from "../types"
 export const $$ = (
     path: string,
     escape_spaces_in_path: boolean,
-): _easync.Unsafe_Query_Result<string, D.Read_File_Error> => {
-    return _easync.__run_unsafe_query({
+): _easync.Unguaranteed_Query_Result<string, D.Read_File_Error> => {
+    return _easync.__run_unguaranteed_query({
         'execute': (on_value, on_exception) => {
             fs.readFile(__possibly_escape_filename(path, escape_spaces_in_path), { 'encoding': 'utf-8' }, (err, data) => {
                 if (err) {

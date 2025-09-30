@@ -8,8 +8,8 @@ import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_
 
 export const $$ = (
     data: _et.Array<string>,
-): _easync.Safe_Procedure_Context => {
-    return _easync.__execute_safe_action({
+): _easync.Guaranteed_Procedure_Context => {
+    return _easync.__execute_guaranteed_action({
         'execute': (on_success) => {
             data.__for_each(($) => {
                 console.log($)
