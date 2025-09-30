@@ -13,9 +13,9 @@ import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_
 export const $$ = (
     path: string,
     escape_spaces_in_path: boolean,
-): _easync.Unsafe_Command_Result<D.Make_Directory_Error> => {
+): _easync.Unsafe_Procedure_Context<D.Make_Directory_Error> => {
 
-    return _easync.__execute_unsafe_command({
+    return _easync.__execute_unsafe_action({
         'execute': (on_success, on_exception) => {
             fs.mkdir(
                 __possibly_escape_filename(path, escape_spaces_in_path),

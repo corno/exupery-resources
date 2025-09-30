@@ -19,8 +19,8 @@ export const $$ = (
         force?: boolean,
         errorOnExist?: boolean,
     }
-): _easync.Unsafe_Command_Result<D.Copy_Error> => {
-    return _easync.__execute_unsafe_command({
+): _easync.Unsafe_Procedure_Context<D.Copy_Error> => {
+    return _easync.__execute_unsafe_action({
         'execute': (on_success, on_exception) => {
             fs.cp(__possibly_escape_filename(source, escape_spaces_in_path), __possibly_escape_filename(target, escape_spaces_in_path), options, (err) => {
                 if (err) {
