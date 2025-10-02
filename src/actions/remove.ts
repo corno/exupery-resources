@@ -22,25 +22,34 @@ export const $$ = (
 ): _easync.Unguaranteed_Procedure_Context<D.Remove_Error> => {
     return _easync.__execute_unguaranteed_action({
         'execute': (on_success, on_exception) => {
-            fs.rm(__possibly_escape_filename(path, escape_spaces_in_path), options, (err) => {
+            fs.rm(
+                __possibly_escape_filename(path, escape_spaces_in_path),
+                {
+                    'recursive': true,
+                },
+                (err) => {
 
-                if (err) {
-                    on_exception(_ei.block((): D.Remove_Error => {
-                        if (err.code === 'ENOENT') {
-                            return ['node does not exist', null]
-                        }
-                        if (err.code === 'EACCES' || err.code === 'EPERM') {
-                            return ['permission denied', null]
-                        }
-                        if (err.code === 'EISDIR' || err.code === 'ENOTDIR') {
-                            return ['node is not a directory', null]
-                        }
-                        return _ei.panic(`unhandled fs.rm error code: ${err.code}`)
-                    }))
-                } else {
-                    on_success()
+                    if (err) {
+                        on_exception(_ei.block((): D.Remove_Error => {
+                            if (err.code === 'ENOENT') {
+                                return ['node does not exist', null]
+                            }
+                            if (err.code === 'EACCES' || err.code === 'EPERM') {
+                                return ['permission denied', null]
+                            }
+                            // if (err.code === 'EISDIR' || err.code === 'ENOTDIR') {
+                            //     return ['node is not a directory', null]
+                            // }
+                            // if (err.code === 'ERR_FS_EISDIR') {
+                            //     return ['node is a directory', null]
+                            // }
+                            return _ei.panic(`unhandled fs.rm error code: ${err.code}`)
+                        }))
+                    } else {
+                        on_success()
+                    }
                 }
-            })
+            )
         }
     })
 }

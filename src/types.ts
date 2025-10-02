@@ -16,7 +16,7 @@ export type Make_Directory_Error =
 
 export type Remove_Error =
     | ['node does not exist', null]
-    | ['node is not a directory', null]
+    // | ['node is not a directory', null]
     | ['permission denied', null]
 
 export type Write_File_Error =
