@@ -4,25 +4,27 @@ import * as _et from 'exupery-core-types'
 
 import * as fs from "fs"
 
-import * as pathlib from "path"
-
 import * as D from "../types"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$ = (
-    source: string,
-    target: string,
-    escape_spaces_in_path: boolean,
-    options: {
-        recursive?: boolean,
-        force?: boolean,
-        errorOnExist?: boolean,
+export type Parameters = {
+    'source': string
+    'target': string
+    'escape spaces in path': boolean
+    'options': {
+        'recursive'?: boolean
+        'force'?: boolean
+        'errorOnExist'?: boolean
     }
-): _easync.Unguaranteed_Procedure_Context<D.Copy_Error> => {
+}
+
+export const $$: _easync.Unguaranteed_Action<Parameters, D.Copy_Error> = (
+    $p,
+) => {
     return _easync.__execute_unguaranteed_action({
         'execute': (on_success, on_exception) => {
-            fs.cp(__possibly_escape_filename(source, escape_spaces_in_path), __possibly_escape_filename(target, escape_spaces_in_path), options, (err) => {
+            fs.cp(__possibly_escape_filename($p.source, $p['escape spaces in path']), __possibly_escape_filename($p.target, $p['escape spaces in path']), $p.options, (err) => {
                 if (err) {
                     on_exception(_ei.block((): D.Copy_Error => {
                         if (err.code === 'ENOENT') {

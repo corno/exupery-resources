@@ -10,15 +10,19 @@ import * as D from "../types"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$ = (
-    path: string,
-    data: string,
-    escape_spaces_in_path: boolean
-): _easync.Unguaranteed_Procedure_Context<D.Write_File_Error> => {
+export type Parameters = {
+    'path': string
+    'data': string
+    'escape spaces in path': boolean
+}
+
+export const $$: _easync.Unguaranteed_Action<Parameters, D.Write_File_Error> = (
+    $p,
+) => {
     return _easync.__execute_unguaranteed_action({
         'execute': (on_success, on_exception) => {
 
-            const fname = __possibly_escape_filename(path, escape_spaces_in_path)
+            const fname = __possibly_escape_filename($p.path, $p['escape spaces in path'])
             fs.mkdir(
                 pathlib.dirname(fname),
                 {
@@ -34,7 +38,7 @@ export const $$ = (
                         }))
                         return
                     }
-                    fs.writeFile(fname, data, (err) => {
+                    fs.writeFile(fname, $p.data, (err) => {
                         if (err) {
                             on_exception(_ei.block(() => {
                                 if (err.code === 'EACCES' || err.code === 'EPERM') {

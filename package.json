@@ -9,11 +9,11 @@
   ],
   "dependencies": {
     "exupery-core-alg": "^0.1.8",
-    "exupery-core-async": "^0.1.31",
+    "exupery-core-async": "^0.1.33",
     "exupery-core-bin": "^0.1.15",
     "exupery-core-dev": "^0.1.2"
   },
   "devDependencies": {
-    "@types/node": "^24.6.1"
+    "@types/node": "^24.6.2"
   }
 }
