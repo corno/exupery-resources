@@ -13,7 +13,7 @@ export const $$: _easync.Unguaranteed_Action<D.Copy_Parameters, D.Copy_Error> = 
 ) => {
     return _easync.__execute_unguaranteed_action({
         'execute': (on_success, on_exception) => {
-            fs.cp(__possibly_escape_filename($p.source, $p['escape spaces in path']), __possibly_escape_filename($p.target, $p['escape spaces in path']), $p.options, (err) => {
+            fs.cp(__possibly_escape_filename($p.source.path, $p.source['escape spaces in path']), __possibly_escape_filename($p.target.path, $p.target['escape spaces in path']), $p.options, (err) => {
                 if (err) {
                     on_exception(_ei.block((): D.Copy_Error => {
                         if (err.code === 'ENOENT') {

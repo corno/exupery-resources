@@ -44,9 +44,8 @@ export type Log_Parameters = {
 }
 
 export type Copy_Parameters = {
-    'source': string
-    'target': string
-    'escape spaces in path': boolean
+    'source': Path
+    'target': Path
     'options': {
         'recursive'?: boolean
         'force'?: boolean
