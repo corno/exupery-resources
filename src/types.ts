@@ -1,3 +1,5 @@
+import * as _ea from 'exupery-core-async'
+import * as _et from 'exupery-core-types'
 
 export type Node_Type =
     | ['file', null]
@@ -35,3 +37,31 @@ export type Read_File_Error =
 
 export type Stat_Error =
     | ['node does not exist', null]
+
+
+export type Log_Parameters = {
+    'lines': _et.Array<string>
+}
+
+export type Copy_Parameters = {
+    'source': string
+    'target': string
+    'escape spaces in path': boolean
+    'options': {
+        'recursive'?: boolean
+        'force'?: boolean
+        'errorOnExist'?: boolean
+    }
+}
+
+export type Path = {
+    'path': string
+    'escape spaces in path': boolean
+}
+
+export type Write_File_Parameters = {
+    'path': Path
+    'data': string
+}
+
+export type Read_Directory_Result = _et.Dictionary<Node_Type>

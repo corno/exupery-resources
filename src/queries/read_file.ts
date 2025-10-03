@@ -6,13 +6,12 @@ import * as fs from "fs"
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 import * as D from "../types"
 
-export const $$ = (
-    path: string,
-    escape_spaces_in_path: boolean,
-): _easync.Unguaranteed_Query_Result<string, D.Read_File_Error> => {
+export const $$: _easync.Unguaranteed_Query<D.Path, string, D.Read_File_Error> = (
+    $p
+) => {
     return _easync.__run_unguaranteed_query({
         'execute': (on_value, on_exception) => {
-            fs.readFile(__possibly_escape_filename(path, escape_spaces_in_path), { 'encoding': 'utf-8' }, (err, data) => {
+            fs.readFile(__possibly_escape_filename($p.path, $p['escape spaces in path']), { 'encoding': 'utf-8' }, (err, data) => {
                 if (err) {
                     on_exception(_ei.block(() => {
                         if (err.code === 'ENOENT') {

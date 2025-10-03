@@ -8,13 +8,12 @@ import * as D from "../types"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$ = (
-    path: string,
-    escape_spaces_in_path: boolean,
-): _easync.Unguaranteed_Query_Result<_et.Dictionary<D.Node_Type>, D.Read_Directory_Error> => {
+export const $$: _easync.Unguaranteed_Query<D.Path, D.Read_Directory_Result, D.Read_Directory_Error> = (
+    $p
+) => {
     return _easync.__run_unguaranteed_query({
         'execute': (on_value, on_exception) => {
-            fs.readdir(__possibly_escape_filename(path, escape_spaces_in_path), {
+            fs.readdir(__possibly_escape_filename($p.path, $p['escape spaces in path']), {
                 'encoding': 'utf-8',
                 'withFileTypes': true,
             }, (err, files) => {

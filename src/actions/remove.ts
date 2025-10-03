@@ -4,20 +4,11 @@ import * as _et from 'exupery-core-types'
 
 import * as fs from "fs"
 
-import * as pathlib from "path"
-
 import * as D from "../types"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-
-export type Parameters = {
-    'path': string
-    'escape spaces in path': boolean
-}
-
-
-export const $$: _easync.Unguaranteed_Action<Parameters, D.Remove_Error> = (
+export const $$: _easync.Unguaranteed_Action<D.Path, D.Remove_Error> = (
     $p,
 ) => {
     return _easync.__execute_unguaranteed_action({

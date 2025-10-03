@@ -6,11 +6,7 @@ import * as D from "../types"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export type Parameters = {
-    'lines': _et.Array<string>
-}
-
-export const $$: _easync.Guaranteed_Action<Parameters> = (
+export const $$: _easync.Guaranteed_Action<D.Log_Parameters> = (
     $p,
 ) => {
     return _easync.__execute_guaranteed_action({
