@@ -8,9 +8,9 @@ import * as D from "../types"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$: _easync.Guaranteed_Query<null, string> = (
+export const $$: _easync.Guaranteed_Query_Initializer<null, string> = (
 ) => {
-    return _easync.__run_guaranteed_query({
+    return _easync.__create_guaranteed_query({
         'execute': (on_value) => {
             
             const stdin = process.stdin;

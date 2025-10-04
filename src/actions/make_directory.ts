@@ -8,11 +8,11 @@ import * as D from "../types"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$: _easync.Unguaranteed_Action<D.Path, D.Make_Directory_Error> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<D.Path, D.Make_Directory_Error> = (
     $p,
 ) => {
 
-    return _easync.__execute_unguaranteed_action({
+    return _easync.__create_unguaranteed_procedure({
         'execute': (on_success, on_exception) => {
             fs.mkdir(
                 __possibly_escape_filename($p.path, $p['escape spaces in path']),

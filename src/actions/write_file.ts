@@ -10,10 +10,10 @@ import * as D from "../types"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$: _easync.Unguaranteed_Action<D.Write_File_Parameters, D.Write_File_Error> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<D.Write_File_Parameters, D.Write_File_Error> = (
     $p,
 ) => {
-    return _easync.__execute_unguaranteed_action({
+    return _easync.__create_unguaranteed_procedure({
         'execute': (on_success, on_exception) => {
 
             const fname = __possibly_escape_filename($p.path.path, $p.path['escape spaces in path'])

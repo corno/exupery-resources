@@ -6,10 +6,10 @@ import * as fs from "fs"
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 import * as D from "../types"
 
-export const $$: _easync.Unguaranteed_Query<D.Path, D.Node_Type, D.Stat_Error> = (
+export const $$: _easync.Unguaranteed_Query_Initializer<D.Path, D.Node_Type, D.Stat_Error> = (
     $p
 ) => {
-    return _easync.__run_unguaranteed_query({
+    return _easync.__create_unguaranteed_query({
         'execute': (on_value, on_exception) => {
             fs.stat(__possibly_escape_filename($p.path, $p['escape spaces in path']), (err, stats) => {
                 if (err) {

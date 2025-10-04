@@ -8,10 +8,10 @@ import * as D from "../types"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$: _easync.Unguaranteed_Query<D.Path, D.Read_Directory_Result, D.Read_Directory_Error> = (
+export const $$: _easync.Unguaranteed_Query_Initializer<D.Path, D.Read_Directory_Result, D.Read_Directory_Error> = (
     $p
 ) => {
-    return _easync.__run_unguaranteed_query({
+    return _easync.__create_unguaranteed_query({
         'execute': (on_value, on_exception) => {
             fs.readdir(__possibly_escape_filename($p.path, $p['escape spaces in path']), {
                 'encoding': 'utf-8',

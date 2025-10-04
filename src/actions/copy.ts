@@ -8,10 +8,10 @@ import * as D from "../types"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$: _easync.Unguaranteed_Action<D.Copy_Parameters, D.Copy_Error> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<D.Copy_Parameters, D.Copy_Error> = (
     $p,
 ) => {
-    return _easync.__execute_unguaranteed_action({
+    return _easync.__create_unguaranteed_procedure({
         'execute': (on_success, on_exception) => {
             fs.cp(__possibly_escape_filename($p.source.path, $p.source['escape spaces in path']), __possibly_escape_filename($p.target.path, $p.target['escape spaces in path']), $p.options, (err) => {
                 if (err) {

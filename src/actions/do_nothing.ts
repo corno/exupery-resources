@@ -4,9 +4,9 @@ import * as _et from 'exupery-core-types'
 
 import * as D from "../types"
 
-export const $$: _easync.Guaranteed_Action<null> = (
+export const $$: _easync.Guaranteed_Procedure_Initializer<null> = (
 ) => {
-    return _easync.__execute_guaranteed_action({
+    return _easync.__create_guaranted_procedure({
         'execute': (on_success) => {
             on_success()
         }
