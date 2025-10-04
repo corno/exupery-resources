@@ -53,6 +53,11 @@ export type Copy_Parameters = {
     }
 }
 
+export type Remove_Parameters = {
+    'path': Path
+    'error if not exists': boolean
+}
+
 export type Path = {
     'path': string
     'escape spaces in path': boolean
