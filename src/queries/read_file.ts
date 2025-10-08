@@ -1,7 +1,7 @@
 import * as _easync from 'exupery-core-async'
 import * as _ei from 'exupery-core-internals'
 
-import * as fs from "fs"
+import { readFile as fs_readFile } from "fs"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 import * as D from "../types"
@@ -11,7 +11,7 @@ export const $$: _easync.Unguaranteed_Query_Initializer<D.Path, string, D.Read_F
 ) => {
     return _easync.__create_unguaranteed_query({
         'execute': (on_value, on_exception) => {
-            fs.readFile(__possibly_escape_filename($p.path, $p['escape spaces in path']), { 'encoding': 'utf-8' }, (err, data) => {
+            fs_readFile(__possibly_escape_filename($p.path, $p['escape spaces in path']), { 'encoding': 'utf-8' }, (err, data) => {
                 if (err) {
                     on_exception(_ei.block(() => {
                         if (err.code === 'ENOENT') {

@@ -2,7 +2,7 @@ import * as _easync from 'exupery-core-async'
 import * as _ei from 'exupery-core-internals'
 import * as _et from 'exupery-core-types'
 
-import * as fs from "fs"
+import { cp as fs_cp } from "fs"
 
 import * as D from "../types"
 
@@ -13,7 +13,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<D.Copy_Parameters, D
 ) => {
     return _easync.__create_unguaranteed_procedure({
         'execute': (on_success, on_exception) => {
-            fs.cp(__possibly_escape_filename($p.source.path, $p.source['escape spaces in path']), __possibly_escape_filename($p.target.path, $p.target['escape spaces in path']), $p.options, (err) => {
+            fs_cp(__possibly_escape_filename($p.source.path, $p.source['escape spaces in path']), __possibly_escape_filename($p.target.path, $p.target['escape spaces in path']), $p.options, (err) => {
                 if (err) {
                     on_exception(_ei.block((): D.Copy_Error => {
                         if (err.code === 'ENOENT') {

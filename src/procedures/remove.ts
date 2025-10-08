@@ -2,7 +2,7 @@ import * as _easync from 'exupery-core-async'
 import * as _ei from 'exupery-core-internals'
 import * as _et from 'exupery-core-types'
 
-import * as fs from "fs"
+import { rm as fs_rm } from "fs"
 
 import * as D from "../types"
 
@@ -13,7 +13,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<D.Remove_Parameters,
 ) => {
     return _easync.__create_unguaranteed_procedure({
         'execute': (on_success, on_exception) => {
-            fs.rm(
+            fs_rm(
                 __possibly_escape_filename($p.path.path, $p.path['escape spaces in path']),
                 {
                     'recursive': true,

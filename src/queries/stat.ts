@@ -1,7 +1,7 @@
 import * as _easync from 'exupery-core-async'
 import * as _ei from 'exupery-core-internals'
 
-import * as fs from "fs"
+import { stat as fs_stat } from "fs"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 import * as D from "../types"
@@ -11,7 +11,7 @@ export const $$: _easync.Unguaranteed_Query_Initializer<D.Path, D.Node_Type, D.S
 ) => {
     return _easync.__create_unguaranteed_query({
         'execute': (on_value, on_exception) => {
-            fs.stat(__possibly_escape_filename($p.path, $p['escape spaces in path']), (err, stats) => {
+            fs_stat(__possibly_escape_filename($p.path, $p['escape spaces in path']), (err, stats) => {
                 if (err) {
                     on_exception(_ei.block(() => {
                         if (err.code === 'ENOENT') {

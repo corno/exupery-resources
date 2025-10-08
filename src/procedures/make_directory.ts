@@ -2,7 +2,7 @@ import * as _easync from 'exupery-core-async'
 import * as _ei from 'exupery-core-internals'
 import * as _et from 'exupery-core-types'
 
-import * as fs from "fs"
+import { mkdir as fs_mkdir } from "fs"
 
 import * as D from "../types"
 
@@ -14,7 +14,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<D.Path, D.Make_Direc
 
     return _easync.__create_unguaranteed_procedure({
         'execute': (on_success, on_exception) => {
-            fs.mkdir(
+            fs_mkdir(
                 __possibly_escape_filename($p.path, $p['escape spaces in path']),
                 {
                     'recursive': true,

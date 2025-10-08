@@ -2,9 +2,9 @@ import * as _easync from 'exupery-core-async'
 import * as _ei from 'exupery-core-internals'
 import * as _et from 'exupery-core-types'
 
-import * as fs from "fs"
+import { mkdir as fs_mkdir, writeFile as fs_writeFile} from "fs"
 
-import * as pathlib from "path"
+import { dirname as path_dirname} from "path"
 
 import * as D from "../types"
 
@@ -17,8 +17,8 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<D.Write_File_Paramet
         'execute': (on_success, on_exception) => {
 
             const fname = __possibly_escape_filename($p.path.path, $p.path['escape spaces in path'])
-            fs.mkdir(
-                pathlib.dirname(fname),
+            fs_mkdir(
+                path_dirname(fname),
                 {
                     'recursive': true
                 },
@@ -32,7 +32,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<D.Write_File_Paramet
                         }))
                         return
                     }
-                    fs.writeFile(fname, $p.data, (err) => {
+                    fs_writeFile(fname, $p.data, (err) => {
                         if (err) {
                             on_exception(_ei.block(() => {
                                 if (err.code === 'EACCES' || err.code === 'EPERM') {
