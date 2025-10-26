@@ -4,18 +4,16 @@ import * as _ei from 'exupery-core-internals'
 import { stat as fs_stat } from "fs"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
-import * as ParameterTypes from "../generated/interface/schemas/parameters/data_types/target"
-import * as ResultTypes from "../generated/interface/schemas/results/data_types/target"
-import * as ErrorTypes from "../generated/interface/schemas/errors/data_types/target"
+import * as d from "../generated/interface/schemas/stat/data_types/target"
 
-export const $$: _easync.Unguaranteed_Query_Initializer<ParameterTypes.Path, ResultTypes.Node_Type, ErrorTypes.Stat> = (
+export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Errors> = (
     $p
 ) => {
     return _easync.__create_unguaranteed_query({
         'execute': (on_value, on_exception) => {
             fs_stat(__possibly_escape_filename($p.path, $p['escape spaces in path']), (err, stats) => {
                 if (err) {
-                    on_exception(_ei.block(() => {
+                    on_exception(_ei.block((): d.Errors => {
                         if (err.code === 'ENOENT') {
                             return ['node does not exist', null]
                         }

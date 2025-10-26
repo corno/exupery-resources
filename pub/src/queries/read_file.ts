@@ -4,17 +4,16 @@ import * as _ei from 'exupery-core-internals'
 import { readFile as fs_readFile } from "fs"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
-import * as ParameterTypes from "../generated/interface/schemas/parameters/data_types/target"
-import * as ErrorTypes from "../generated/interface/schemas/errors/data_types/target"
+import * as d from "../generated/interface/schemas/read_file/data_types/target"
 
-export const $$: _easync.Unguaranteed_Query_Initializer<ParameterTypes.Path, string, ErrorTypes.Read_File> = (
+export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Errors> = (
     $p
 ) => {
     return _easync.__create_unguaranteed_query({
         'execute': (on_value, on_exception) => {
             fs_readFile(__possibly_escape_filename($p.path, $p['escape spaces in path']), { 'encoding': 'utf-8' }, (err, data) => {
                 if (err) {
-                    on_exception(_ei.block(() => {
+                    on_exception(_ei.block((): d.Errors => {
                         if (err.code === 'ENOENT') {
                             return ['file does not exist', null]
                         }

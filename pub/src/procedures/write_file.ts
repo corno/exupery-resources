@@ -6,12 +6,11 @@ import { mkdir as fs_mkdir, writeFile as fs_writeFile} from "fs"
 
 import { dirname as path_dirname} from "path"
 
-import * as ParameterTypes from "../generated/interface/schemas/parameters/data_types/target"
-import * as ErrorTypes from "../generated/interface/schemas/errors/data_types/target"
+import * as d from "../generated/interface/schemas/write_file/data_types/target"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$: _easync.Unguaranteed_Procedure_Initializer<ParameterTypes.Write_File, ErrorTypes.Write_File> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Errors> = (
     $p,
 ) => {
     return _easync.__create_unguaranteed_procedure({
@@ -25,7 +24,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<ParameterTypes.Write
                 },
                 (err, path) => {
                     if (err) {
-                        on_exception(_ei.block(() => {
+                        on_exception(_ei.block((): d.Errors => {
                             if (err.code === 'EACCES' || err.code === 'EPERM') {
                                 return ['permission denied', null]
                             }
@@ -35,7 +34,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<ParameterTypes.Write
                     }
                     fs_writeFile(fname, $p.data, (err) => {
                         if (err) {
-                            on_exception(_ei.block(() => {
+                            on_exception(_ei.block((): d.Errors => {
                                 if (err.code === 'EACCES' || err.code === 'EPERM') {
                                     return ['permission denied', null]
                                 }

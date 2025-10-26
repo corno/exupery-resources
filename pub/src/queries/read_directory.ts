@@ -4,13 +4,11 @@ import * as _et from 'exupery-core-types'
 
 import { readdir as fs_readdir } from "fs"
 
-import * as ParameterTypes from "../generated/interface/schemas/parameters/data_types/target"
-import * as ResultTypes from "../generated/interface/schemas/results/data_types/target"
-import * as ErrorTypes from "../generated/interface/schemas/errors/data_types/target"
+import * as d from "../generated/interface/schemas/read_directory/data_types/target"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$: _easync.Unguaranteed_Query_Initializer<ParameterTypes.Path, ResultTypes.Read_Directory, ErrorTypes.Read_Directory> = (
+export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Errors> = (
     $p
 ) => {
     return _easync.__create_unguaranteed_query({
@@ -20,7 +18,7 @@ export const $$: _easync.Unguaranteed_Query_Initializer<ParameterTypes.Path, Res
                 'withFileTypes': true,
             }, (err, files) => {
                 if (err) {
-                    on_exception(_ei.block(() => {
+                    on_exception(_ei.block((): d.Errors => {
                         if (err.code === 'ENOENT') {
                             return ['directory does not exist', null]
                         }
@@ -30,7 +28,7 @@ export const $$: _easync.Unguaranteed_Query_Initializer<ParameterTypes.Path, Res
                         return _ei.panic(`unhandled fs.readdir error code: ${err.code}`)
                     }))
                 } else {
-                    const out: { [key: string]: ResultTypes.Node_Type } = {}
+                    const out: { [key: string]: d.Node_Type } = {}
                     files.forEach((file) => {
                         out[file.name] = file.isFile() ? ['file', null] : ['directory', null]
                     })
