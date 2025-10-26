@@ -4,11 +4,12 @@ import * as _et from 'exupery-core-types'
 
 import { mkdir as fs_mkdir } from "fs"
 
-import * as D from "../types"
+import * as ParameterTypes from "../generated/interface/schemas/parameters/data_types/target"
+import * as ErrorTypes from "../generated/interface/schemas/errors/data_types/target"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$: _easync.Unguaranteed_Procedure_Initializer<D.Path, D.Make_Directory_Error> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<ParameterTypes.Path, ErrorTypes.Make_Directory> = (
     $p,
 ) => {
 

@@ -4,9 +4,10 @@ import * as _ei from 'exupery-core-internals'
 import { readFile as fs_readFile } from "fs"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
-import * as D from "../types"
+import * as ParameterTypes from "../generated/interface/schemas/parameters/data_types/target"
+import * as ErrorTypes from "../generated/interface/schemas/errors/data_types/target"
 
-export const $$: _easync.Unguaranteed_Query_Initializer<D.Path, string, D.Read_File_Error> = (
+export const $$: _easync.Unguaranteed_Query_Initializer<ParameterTypes.Path, string, ErrorTypes.Read_File> = (
     $p
 ) => {
     return _easync.__create_unguaranteed_query({

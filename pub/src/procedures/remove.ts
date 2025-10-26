@@ -4,11 +4,12 @@ import * as _et from 'exupery-core-types'
 
 import { rm as fs_rm } from "fs"
 
-import * as D from "../types"
+import * as ParameterTypes from "../generated/interface/schemas/parameters/data_types/target"
+import * as ErrorTypes from "../generated/interface/schemas/errors/data_types/target"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$: _easync.Unguaranteed_Procedure_Initializer<D.Remove_Parameters, D.Remove_Error> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<ParameterTypes.Remove, ErrorTypes.Remove> = (
     $p,
 ) => {
     return _easync.__create_unguaranteed_procedure({
@@ -24,7 +25,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<D.Remove_Parameters,
                         if (err.code === 'ENOENT' && !$p['error if not exists']) {
                             on_success()
                         } else {
-                            on_exception(_ei.block((): D.Remove_Error => {
+                            on_exception(_ei.block((): ErrorTypes.Remove => {
                                 if (err.code === 'ENOENT') {
                                     return ['node does not exist', null]
                                 }

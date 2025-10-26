@@ -6,11 +6,12 @@ import { mkdir as fs_mkdir, writeFile as fs_writeFile} from "fs"
 
 import { dirname as path_dirname} from "path"
 
-import * as D from "../types"
+import * as ParameterTypes from "../generated/interface/schemas/parameters/data_types/target"
+import * as ErrorTypes from "../generated/interface/schemas/errors/data_types/target"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$: _easync.Unguaranteed_Procedure_Initializer<D.Write_File_Parameters, D.Write_File_Error> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<ParameterTypes.Write_File, ErrorTypes.Write_File> = (
     $p,
 ) => {
     return _easync.__create_unguaranteed_procedure({

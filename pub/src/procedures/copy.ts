@@ -4,18 +4,24 @@ import * as _et from 'exupery-core-types'
 
 import { cp as fs_cp } from "fs"
 
-import * as D from "../types"
+import * as ParameterTypes from "../generated/interface/schemas/parameters/data_types/target"
+import * as ErrorTypes from "../generated/interface/schemas/errors/data_types/target"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$: _easync.Unguaranteed_Procedure_Initializer<D.Copy_Parameters, D.Copy_Error> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<ParameterTypes.Copy, ErrorTypes.Copy> = (
     $p,
 ) => {
     return _easync.__create_unguaranteed_procedure({
         'execute': (on_success, on_exception) => {
-            fs_cp(__possibly_escape_filename($p.source.path, $p.source['escape spaces in path']), __possibly_escape_filename($p.target.path, $p.target['escape spaces in path']), $p.options, (err) => {
+            const options: any = {}
+            $p.options.recursive.map(($) => { options.recursive = $ })
+            $p.options.force.map(($) => { options.force = $ })
+            $p.options.errorOnExist.map(($) => { options.errorOnExist = $ })
+            
+            fs_cp(__possibly_escape_filename($p.source.path, $p.source['escape spaces in path']), __possibly_escape_filename($p.target.path, $p.target['escape spaces in path']), options, (err) => {
                 if (err) {
-                    on_exception(_ei.block((): D.Copy_Error => {
+                    on_exception(_ei.block((): ErrorTypes.Copy => {
                         if (err.code === 'ENOENT') {
                             return ['source does not exist', null]
                         }

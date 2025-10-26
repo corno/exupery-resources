@@ -2,11 +2,11 @@ import * as _easync from 'exupery-core-async'
 import * as _ea from 'exupery-core-alg'
 import * as _et from 'exupery-core-types'
 
-import * as D from "../types"
+import * as ParameterTypes from "../generated/interface/schemas/parameters/data_types/target"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$: _easync.Guaranteed_Procedure_Initializer<D.Log_Parameters> = (
+export const $$: _easync.Guaranteed_Procedure_Initializer<ParameterTypes.Log> = (
     $p,
 ) => {
     return _easync.__create_guaranted_procedure({

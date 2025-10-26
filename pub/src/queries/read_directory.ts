@@ -4,11 +4,13 @@ import * as _et from 'exupery-core-types'
 
 import { readdir as fs_readdir } from "fs"
 
-import * as D from "../types"
+import * as ParameterTypes from "../generated/interface/schemas/parameters/data_types/target"
+import * as ResultTypes from "../generated/interface/schemas/results/data_types/target"
+import * as ErrorTypes from "../generated/interface/schemas/errors/data_types/target"
 
 import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
 
-export const $$: _easync.Unguaranteed_Query_Initializer<D.Path, D.Read_Directory_Result, D.Read_Directory_Error> = (
+export const $$: _easync.Unguaranteed_Query_Initializer<ParameterTypes.Path, ResultTypes.Read_Directory, ErrorTypes.Read_Directory> = (
     $p
 ) => {
     return _easync.__create_unguaranteed_query({
@@ -28,7 +30,7 @@ export const $$: _easync.Unguaranteed_Query_Initializer<D.Path, D.Read_Directory
                         return _ei.panic(`unhandled fs.readdir error code: ${err.code}`)
                     }))
                 } else {
-                    const out: { [key: string]: D.Node_Type } = {}
+                    const out: { [key: string]: ResultTypes.Node_Type } = {}
                     files.forEach((file) => {
                         out[file.name] = file.isFile() ? ['file', null] : ['directory', null]
                     })
