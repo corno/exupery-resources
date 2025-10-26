@@ -4,8 +4,6 @@ import * as _et from 'exupery-core-types'
 
 import * as d from "../generated/interface/schemas/log_error/data_types/target"
 
-import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
-
 export const $$: _easync.Guaranteed_Procedure_Initializer<d.Parameters> = (
     $p,
 ) => {
