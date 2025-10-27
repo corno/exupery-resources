@@ -6,9 +6,9 @@ import { mkdir as fs_mkdir, writeFile as fs_writeFile} from "fs"
 
 import { dirname as path_dirname} from "path"
 
-import * as d from "../generated/interface/schemas/write_file/data_types/target"
+import * as d from "../../generated/interface/schemas/write_file/data_types/target"
 
-import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
+import { $$ as __possibly_escape_filename } from "../../__internal/possibly_escape_file_name"
 
 export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Errors> = (
     $p,

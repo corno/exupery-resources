@@ -4,9 +4,9 @@ import * as _et from 'exupery-core-types'
 
 import { rm as fs_rm } from "fs"
 
-import * as d from "../generated/interface/schemas/remove/data_types/target"
+import * as d from "../../generated/interface/schemas/remove/data_types/target"
 
-import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
+import { $$ as __possibly_escape_filename } from "../../__internal/possibly_escape_file_name"
 
 export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Errors> = (
     $p,

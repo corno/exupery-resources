@@ -19,6 +19,12 @@ export namespace d {
 }
 // ---------------------------------------------------------------
 
+
+/**
+ * 
+ * The executable being executed is assumed to only cause side effects
+ * and not return any meaningful data, std::out is therefor ignored
+ */
 export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Errors> = (
     $p,
 ) => {

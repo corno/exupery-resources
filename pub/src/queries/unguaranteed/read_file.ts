@@ -3,8 +3,8 @@ import * as _ei from 'exupery-core-internals'
 
 import { readFile as fs_readFile } from "fs"
 
-import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
-import * as d from "../generated/interface/schemas/read_file/data_types/target"
+import { $$ as __possibly_escape_filename } from "../../__internal/possibly_escape_file_name"
+import * as d from "../../generated/interface/schemas/read_file/data_types/target"
 
 export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Errors> = (
     $p

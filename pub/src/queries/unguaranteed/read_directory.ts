@@ -4,9 +4,9 @@ import * as _et from 'exupery-core-types'
 
 import { readdir as fs_readdir } from "fs"
 
-import * as d from "../generated/interface/schemas/read_directory/data_types/target"
+import * as d from "../../generated/interface/schemas/read_directory/data_types/target"
 
-import { $$ as __possibly_escape_filename } from "../__internal/possibly_escape_file_name"
+import { $$ as __possibly_escape_filename } from "../../__internal/possibly_escape_file_name"
 
 export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Errors> = (
     $p
