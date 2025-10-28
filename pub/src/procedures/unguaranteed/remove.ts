@@ -4,13 +4,17 @@ import * as _et from 'exupery-core-types'
 
 import { rm as fs_rm } from "fs"
 
-import * as d from "../../generated/interface/schemas/remove/data_types/target"
-
-import { $$ as __possibly_escape_filename } from "../../__internal/possibly_escape_file_name"
+import * as d from "../../interface/generated/pareto/schemas/remove/data_types/target"
 
 export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Errors> = (
     $p,
 ) => {
+    const __possibly_escape_filename = (path: string, escape: boolean): string => {
+        if (escape) {
+            return path.replace(/ /g, '_')
+        }
+        return path
+    }
     return _easync.__create_unguaranteed_procedure({
         'execute': (on_success, on_exception) => {
             fs_rm(

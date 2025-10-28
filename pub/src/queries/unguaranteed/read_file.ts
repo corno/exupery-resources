@@ -3,12 +3,17 @@ import * as _ei from 'exupery-core-internals'
 
 import { readFile as fs_readFile } from "fs"
 
-import { $$ as __possibly_escape_filename } from "../../__internal/possibly_escape_file_name"
-import * as d from "../../generated/interface/schemas/read_file/data_types/target"
+import * as d from "../../interface/generated/pareto/schemas/read_file/data_types/target"
 
 export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Errors> = (
     $p
 ) => {
+    const __possibly_escape_filename = (path: string, escape: boolean): string => {
+        if (escape) {
+            return path.replace(/ /g, '_')
+        }
+        return path
+    }
     return _easync.__create_unguaranteed_query({
         'execute': (on_value, on_exception) => {
             fs_readFile(__possibly_escape_filename($p.path, $p['escape spaces in path']), { 'encoding': 'utf-8' }, (err, data) => {
