@@ -3,7 +3,7 @@ import * as _ei from 'exupery-core-internals'
 
 import { stat as fs_stat } from "fs"
 
-import * as d from "../../interface/generated/pareto/schemas/stat/data_types/target"
+import * as d from "../../../interface/generated/pareto/schemas/stat/data_types/target"
 
 export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Errors> = (
     $p

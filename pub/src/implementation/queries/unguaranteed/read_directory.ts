@@ -4,7 +4,7 @@ import * as _et from 'exupery-core-types'
 
 import { readdir as fs_readdir } from "fs"
 
-import * as d from "../../interface/generated/pareto/schemas/read_directory/data_types/target"
+import * as d from "../../../interface/generated/pareto/schemas/read_directory/data_types/target"
 
 export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Errors> = (
     $p

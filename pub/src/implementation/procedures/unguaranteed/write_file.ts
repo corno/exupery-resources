@@ -6,7 +6,7 @@ import { mkdir as fs_mkdir, writeFile as fs_writeFile} from "fs"
 
 import { dirname as path_dirname} from "path"
 
-import * as d from "../../interface/generated/pareto/schemas/write_file/data_types/target"
+import * as d from "../../../interface/generated/pareto/schemas/write_file/data_types/target"
 
 export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Errors> = (
     $p,

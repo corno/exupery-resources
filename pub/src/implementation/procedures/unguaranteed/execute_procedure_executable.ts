@@ -2,7 +2,7 @@ import * as _easync from 'exupery-core-async'
 import * as _ei from 'exupery-core-internals'
 import * as _et from 'exupery-core-types'
 
-import * as d from "../../interface/generated/pareto/schemas/execute_procedure_executable/data_types/target"
+import * as d from "../../../interface/generated/pareto/schemas/execute_procedure_executable/data_types/target"
 
 import { spawn } from "node:child_process"
 
