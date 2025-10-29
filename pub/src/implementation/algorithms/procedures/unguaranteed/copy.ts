@@ -4,8 +4,8 @@ import * as _et from 'exupery-core-types'
 
 import { cp as fs_cp } from "fs"
 
-import * as d from "../../../interface/generated/pareto/schemas/copy/data_types/target"
-import { Signature } from "../../../interface/algorithms/procedures/unguaranteed/copy"
+import * as d from "../../../../interface/generated/pareto/schemas/copy/data_types/target"
+import { Signature } from "../../../../interface/algorithms/procedures/unguaranteed/copy"
 
 
 export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Errors> = (

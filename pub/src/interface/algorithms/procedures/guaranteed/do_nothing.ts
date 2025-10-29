@@ -1,4 +1,3 @@
-// Generated interface for procedures/guaranteed/do_nothing.ts
-// This file defines the type signature for the implementation
+import * as _easync from 'exupery-core-async'
 
-export type Signature = () => void
+export type Signature = _easync.Guaranteed_Procedure_Initializer<null>

@@ -2,8 +2,8 @@ import * as _easync from 'exupery-core-async'
 import * as _ei from 'exupery-core-internals'
 import * as _et from 'exupery-core-types'
 
-import * as d from "../../../interface/generated/pareto/schemas/get_instream_data/data_types/target"
-import { Signature } from "../../../interface/algorithms/queries/guaranteed/get_instream_data"
+import * as d from "../../../../interface/generated/pareto/schemas/get_instream_data/data_types/target"
+import { Signature } from "../../../../interface/algorithms/queries/guaranteed/get_instream_data"
 
 
 export const $$: _easync.Guaranteed_Query_Initializer<null, d.Result> = (

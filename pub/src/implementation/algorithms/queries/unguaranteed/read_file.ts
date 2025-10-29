@@ -3,8 +3,8 @@ import * as _ei from 'exupery-core-internals'
 
 import { readFile as fs_readFile } from "fs"
 
-import * as d from "../../../interface/generated/pareto/schemas/read_file/data_types/target"
-import { Signature } from "../../../interface/algorithms/queries/unguaranteed/read_file"
+import * as d from "../../../../interface/generated/pareto/schemas/read_file/data_types/target"
+import { Signature } from "../../../../interface/algorithms/queries/unguaranteed/read_file"
 
 
 export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Errors> = (
