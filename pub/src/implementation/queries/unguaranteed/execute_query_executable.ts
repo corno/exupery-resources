@@ -6,6 +6,8 @@ import * as d from "../../../interface/generated/pareto/schemas/execute_query_ex
 
 
 import { spawn } from "node:child_process"
+import { Signature } from "../../../interface/algorithms/queries/unguaranteed/execute_query_executable"
+
 
 /**
  * 
