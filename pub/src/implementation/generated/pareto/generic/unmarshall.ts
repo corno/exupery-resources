@@ -3,8 +3,8 @@ import * as _ea from "exupery-core-alg"
 import * as _ed from "exupery-core-dev"
 
 import * as t from "../../../../interface/generated/pareto/core/astn_source"
-import * as unconstrained from "../../../../interface/generated/pareto//core/unconstrained"
-import * as unresolved from "../../../../interface/generated/pareto//core/unresolved"
+import * as unconstrained from "../../../../interface/generated/pareto/core/unconstrained"
+import * as unresolved from "../../../../interface/generated/pareto/core/unresolved"
 
 export const process_unconstrained_state_group = <X>(
     $: t._T_Value,
