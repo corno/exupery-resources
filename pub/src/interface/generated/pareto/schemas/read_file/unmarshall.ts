@@ -6,12 +6,12 @@ import * as _i_vd from "./value_deserializers"
 
 // **** TYPES
 
-export type _T_Errors = (
+export type _T_Error = (
     $$_: _i_in._T_Value,
     $$_p: {
         readonly 'value deserializers': _i_vd._T_Value_Deserializers
     },
-) => _i_out._T_Errors
+) => _i_out._T_Error
 
 export type _T_Parameters = (
     $$_: _i_in._T_Value,
@@ -36,7 +36,7 @@ export type _T_Result = (
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
 
-export type Errors = _T_Errors
+export type Error = _T_Error
 
 export type Parameters = _T_Parameters
 
@@ -46,7 +46,7 @@ export type Result = _T_Result
 
 // **** ALIASES FOR NESTED TYPE WITH PREFIXED ROOT NAMES
 
-export namespace _T_Errors {
+export namespace _T_Error {
     
     export namespace CONTEXT {
     }
@@ -61,7 +61,7 @@ export namespace _T_Errors {
     
     export namespace RESULT {
     }
-    export type RESULT = _i_out._T_Errors
+    export type RESULT = _i_out._T_Error
 }
 
 export namespace _T_Parameters {
@@ -120,7 +120,7 @@ export namespace _T_Result {
 
 // *** ALIASES FOR NESTED TYPES
 
-export namespace Errors {
+export namespace Error {
     
     export namespace CONTEXT {
     }
@@ -135,7 +135,7 @@ export namespace Errors {
     
     export namespace RESULT {
     }
-    export type RESULT = _i_out._T_Errors
+    export type RESULT = _i_out._T_Error
 }
 
 export namespace Parameters {

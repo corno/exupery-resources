@@ -4,7 +4,7 @@ import * as _i_core from "../../../core/resolved"
 
 // **** TYPES
 
-export type _T_Errors = _i_core._T_State_Group<null, 
+export type _T_Error = _i_core._T_State_Group<null, 
     | readonly ['directory already exists', null]
     | readonly ['permission denied', null]
 >
@@ -18,7 +18,7 @@ export type _T_Path = {
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
 
-export type Errors = _T_Errors
+export type Error = _T_Error
 
 export type Parameters = _T_Parameters
 
@@ -26,7 +26,7 @@ export type Path = _T_Path
 
 // **** ALIASES FOR NESTED TYPE WITH PREFIXED ROOT NAMES
 
-export namespace _T_Errors {
+export namespace _T_Error {
     
     export namespace SG {
         export type directory_already_exists = null
@@ -47,7 +47,7 @@ export namespace _T_Path {
 
 // *** ALIASES FOR NESTED TYPES
 
-export namespace Errors {
+export namespace Error {
     
     export namespace SG {
         export type directory_already_exists = null

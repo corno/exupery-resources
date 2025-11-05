@@ -10,7 +10,7 @@ import * as d from "../../../../interface/generated/pareto/schemas/write_file/da
 import { Signature } from "../../../../interface/algorithms/procedures/unguaranteed/write_file"
 
 
-export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Errors> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Error> = (
     $p,
 ) => {
     const __possibly_escape_filename = (path: string, escape: boolean): string => {
@@ -30,7 +30,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Erro
                 },
                 (err, path) => {
                     if (err) {
-                        on_exception(_ei.block((): d.Errors => {
+                        on_exception(_ei.block((): d.Error => {
                             if (err.code === 'EACCES' || err.code === 'EPERM') {
                                 return ['permission denied', null]
                             }
@@ -40,7 +40,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Erro
                     }
                     fs_writeFile(fname, $p.data, (err) => {
                         if (err) {
-                            on_exception(_ei.block((): d.Errors => {
+                            on_exception(_ei.block((): d.Error => {
                                 if (err.code === 'EACCES' || err.code === 'EPERM') {
                                     return ['permission denied', null]
                                 }

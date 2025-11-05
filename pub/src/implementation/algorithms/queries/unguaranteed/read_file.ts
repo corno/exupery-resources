@@ -7,7 +7,7 @@ import * as d from "../../../../interface/generated/pareto/schemas/read_file/dat
 import { Signature } from "../../../../interface/algorithms/queries/unguaranteed/read_file"
 
 
-export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Errors> = (
+export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Error> = (
     $p
 ) => {
     const __possibly_escape_filename = (path: string, escape: boolean): string => {
@@ -20,7 +20,7 @@ export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, 
         'execute': (on_value, on_exception) => {
             fs_readFile(__possibly_escape_filename($p.path, $p['escape spaces in path']), { 'encoding': 'utf-8' }, (err, data) => {
                 if (err) {
-                    on_exception(_ei.block((): d.Errors => {
+                    on_exception(_ei.block((): d.Error => {
                         if (err.code === 'ENOENT') {
                             return ['file does not exist', null]
                         }

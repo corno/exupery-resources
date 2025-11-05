@@ -8,7 +8,7 @@ import * as d from "../../../../interface/generated/pareto/schemas/read_director
 import { Signature } from "../../../../interface/algorithms/queries/unguaranteed/read_directory"
 
 
-export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Errors> = (
+export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Error> = (
     $p
 ) => {
     const __possibly_escape_filename = (path: string, escape: boolean): string => {
@@ -24,7 +24,7 @@ export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, 
                 'withFileTypes': true,
             }, (err, files) => {
                 if (err) {
-                    on_exception(_ei.block((): d.Errors => {
+                    on_exception(_ei.block((): d.Error => {
                         if (err.code === 'ENOENT') {
                             return ['directory does not exist', null]
                         }

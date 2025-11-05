@@ -8,7 +8,7 @@ import * as d from "../../../../interface/generated/pareto/schemas/copy/data_typ
 import { Signature } from "../../../../interface/algorithms/procedures/unguaranteed/copy"
 
 
-export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Errors> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Error> = (
     $p,
 ) => {
     const __possibly_escape_filename = (path: string, escape: boolean): string => {
@@ -26,7 +26,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Erro
             
             fs_cp(__possibly_escape_filename($p.source.path, $p.source['escape spaces in path']), __possibly_escape_filename($p.target.path, $p.target['escape spaces in path']), options, (err) => {
                 if (err) {
-                    on_exception(_ei.block((): d.Errors => {
+                    on_exception(_ei.block((): d.Error => {
                         if (err.code === 'ENOENT') {
                             return ['source does not exist', null]
                         }

@@ -10,7 +10,8 @@
   "dependencies": {
     "exupery-core-alg": "^0.2.0",
     "exupery-core-async": "^0.2.0",
-    "exupery-core-dev": "^0.2.0"
+    "exupery-core-dev": "^0.2.0",
+    "exupery-standard-library": "^0.2.0"
   },
   "devDependencies": {
     "@types/node": "^24.7.1"

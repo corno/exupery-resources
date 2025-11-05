@@ -7,27 +7,27 @@ import * as _i_out from "../../../../../interface/generated/pareto/schemas/copy/
 import * as _i_signatures from "../../../../../interface/generated/pareto/schemas/copy/unmarshall"
 
 
-export const Errors: _i_signatures._T_Errors = ($, $p) => _i_generic.process_unconstrained_state_group(
+export const Error: _i_signatures._T_Error = ($, $p) => _i_generic.process_unconstrained_state_group(
     $,
     {
         'states': _pa.dictionary_literal({
-            'device not ready': ($): _i_out._T_Errors.SG => ['device not ready', _i_generic.process_nothing(
+            'device not ready': ($): _i_out._T_Error.SG => ['device not ready', _i_generic.process_nothing(
                 $,
                 null
             )],
-            'file too large': ($): _i_out._T_Errors.SG => ['file too large', _i_generic.process_nothing(
+            'file too large': ($): _i_out._T_Error.SG => ['file too large', _i_generic.process_nothing(
                 $,
                 null
             )],
-            'node is not a file': ($): _i_out._T_Errors.SG => ['node is not a file', _i_generic.process_nothing(
+            'node is not a file': ($): _i_out._T_Error.SG => ['node is not a file', _i_generic.process_nothing(
                 $,
                 null
             )],
-            'permission denied': ($): _i_out._T_Errors.SG => ['permission denied', _i_generic.process_nothing(
+            'permission denied': ($): _i_out._T_Error.SG => ['permission denied', _i_generic.process_nothing(
                 $,
                 null
             )],
-            'source does not exist': ($): _i_out._T_Errors.SG => ['source does not exist', _i_generic.process_nothing(
+            'source does not exist': ($): _i_out._T_Error.SG => ['source does not exist', _i_generic.process_nothing(
                 $,
                 null
             )],

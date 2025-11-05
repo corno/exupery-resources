@@ -8,7 +8,7 @@ import * as d from "../../../../interface/generated/pareto/schemas/make_director
 import { Signature } from "../../../../interface/algorithms/procedures/unguaranteed/make_directory"
 
 
-export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Errors> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Error> = (
     $p,
 ) => {
     const __possibly_escape_filename = (path: string, escape: boolean): string => {
@@ -26,7 +26,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Erro
                 },
                 (err, path) => {
                     if (err) {
-                        on_exception(_ei.block((): d.Errors => {
+                        on_exception(_ei.block((): d.Error => {
                             if (err.code === 'EEXIST') {
                                 return ['directory already exists', null]
                             }

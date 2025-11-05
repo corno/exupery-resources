@@ -5,7 +5,7 @@ import * as _i_out from "../../../../../interface/generated/pareto/core/astn_tar
 import * as _i_signatures from "../../../../../interface/generated/pareto/schemas/read_directory/marshall"
 
 
-export const Errors: _i_signatures._T_Errors = ($, $p) => ['state', _pa.cc($, ($): _i_out._T_Value.SG.state => {
+export const Error: _i_signatures._T_Error = ($, $p) => ['state', _pa.cc($, ($): _i_out._T_Value.SG.state => {
     switch ($[0]) {
         case 'directory does not exist': return _pa.ss($, ($) => ({
             'state': "directory does not exist",

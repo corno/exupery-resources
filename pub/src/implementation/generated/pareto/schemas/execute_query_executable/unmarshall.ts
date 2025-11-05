@@ -7,11 +7,11 @@ import * as _i_out from "../../../../../interface/generated/pareto/schemas/execu
 import * as _i_signatures from "../../../../../interface/generated/pareto/schemas/execute_query_executable/unmarshall"
 
 
-export const Errors: _i_signatures._T_Errors = ($, $p) => _i_generic.process_unconstrained_state_group(
+export const Error: _i_signatures._T_Error = ($, $p) => _i_generic.process_unconstrained_state_group(
     $,
     {
         'states': _pa.dictionary_literal({
-            'failed to spawn': ($): _i_out._T_Errors.SG => ['failed to spawn', _i_generic.process_group(
+            'failed to spawn': ($): _i_out._T_Error.SG => ['failed to spawn', _i_generic.process_group(
                 $,
                 {
                     'properties': ($) => ({
@@ -27,7 +27,7 @@ export const Errors: _i_signatures._T_Errors = ($, $p) => _i_generic.process_unc
                     }),
                 }
             )],
-            'non zero exit code': ($): _i_out._T_Errors.SG => ['non zero exit code', _i_generic.process_group(
+            'non zero exit code': ($): _i_out._T_Error.SG => ['non zero exit code', _i_generic.process_group(
                 $,
                 {
                     'properties': ($) => ({

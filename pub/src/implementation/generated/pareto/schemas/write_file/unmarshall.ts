@@ -7,11 +7,11 @@ import * as _i_out from "../../../../../interface/generated/pareto/schemas/write
 import * as _i_signatures from "../../../../../interface/generated/pareto/schemas/write_file/unmarshall"
 
 
-export const Errors: _i_signatures._T_Errors = ($, $p) => _i_generic.process_unconstrained_state_group(
+export const Error: _i_signatures._T_Error = ($, $p) => _i_generic.process_unconstrained_state_group(
     $,
     {
         'states': _pa.dictionary_literal({
-            'permission denied': ($): _i_out._T_Errors.SG => ['permission denied', _i_generic.process_nothing(
+            'permission denied': ($): _i_out._T_Error.SG => ['permission denied', _i_generic.process_nothing(
                 $,
                 null
             )],

@@ -7,15 +7,15 @@ import * as _i_out from "../../../../../interface/generated/pareto/schemas/read_
 import * as _i_signatures from "../../../../../interface/generated/pareto/schemas/read_directory/unmarshall"
 
 
-export const Errors: _i_signatures._T_Errors = ($, $p) => _i_generic.process_unconstrained_state_group(
+export const Error: _i_signatures._T_Error = ($, $p) => _i_generic.process_unconstrained_state_group(
     $,
     {
         'states': _pa.dictionary_literal({
-            'directory does not exist': ($): _i_out._T_Errors.SG => ['directory does not exist', _i_generic.process_nothing(
+            'directory does not exist': ($): _i_out._T_Error.SG => ['directory does not exist', _i_generic.process_nothing(
                 $,
                 null
             )],
-            'node is not a directory': ($): _i_out._T_Errors.SG => ['node is not a directory', _i_generic.process_nothing(
+            'node is not a directory': ($): _i_out._T_Error.SG => ['node is not a directory', _i_generic.process_nothing(
                 $,
                 null
             )],

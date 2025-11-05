@@ -5,7 +5,7 @@ import * as _i_out from "../../../../../interface/generated/pareto/core/astn_tar
 import * as _i_signatures from "../../../../../interface/generated/pareto/schemas/copy/marshall"
 
 
-export const Errors: _i_signatures._T_Errors = ($, $p) => ['state', _pa.cc($, ($): _i_out._T_Value.SG.state => {
+export const Error: _i_signatures._T_Error = ($, $p) => ['state', _pa.cc($, ($): _i_out._T_Value.SG.state => {
     switch ($[0]) {
         case 'device not ready': return _pa.ss($, ($) => ({
             'state': "device not ready",

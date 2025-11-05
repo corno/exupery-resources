@@ -6,8 +6,8 @@ import * as _i_vs from "./value_serializers"
 
 // **** TYPES
 
-export type _T_Errors = (
-    $$_: _i_in._T_Errors,
+export type _T_Error = (
+    $$_: _i_in._T_Error,
     $$_p: {
         readonly 'value serializers': _i_vs._T_Value_Serializers
     },
@@ -36,7 +36,7 @@ export type _T_Result = (
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
 
-export type Errors = _T_Errors
+export type Error = _T_Error
 
 export type Parameters = _T_Parameters
 
@@ -46,11 +46,11 @@ export type Result = _T_Result
 
 // **** ALIASES FOR NESTED TYPE WITH PREFIXED ROOT NAMES
 
-export namespace _T_Errors {
+export namespace _T_Error {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Errors
+    export type CONTEXT = _i_in._T_Error
     
     export namespace PARAMS {
         
@@ -120,11 +120,11 @@ export namespace _T_Result {
 
 // *** ALIASES FOR NESTED TYPES
 
-export namespace Errors {
+export namespace Error {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Errors
+    export type CONTEXT = _i_in._T_Error
     
     export namespace PARAMS {
         

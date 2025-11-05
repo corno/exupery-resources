@@ -14,7 +14,7 @@ import { Signature } from "../../../../interface/algorithms/queries/unguaranteed
  * The executable being executed is assumed to be side effect free
  * There is no way to give guarantees about that though
  */
-export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Errors> = (
+export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Error> = (
     $p
 ) => {
     const args = $p.args.__get_raw_copy()
@@ -37,7 +37,7 @@ export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, 
             })
 
             child.on("error", err => {
-                on_exception(_ei.block((): d.Errors => {
+                on_exception(_ei.block((): d.Error => {
                     return ['failed to spawn', {
                         message: err instanceof Error ? err.message : `${err}`
                     }]
@@ -50,7 +50,7 @@ export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, 
                         stdout: stdoutData,
                     })
                 } else {
-                    on_exception(_ei.block((): d.Errors => {
+                    on_exception(_ei.block((): d.Error => {
                         return ['non zero exit code', {
                             exitCode: exitCode ?? -1,
                             stderr: stderrData,

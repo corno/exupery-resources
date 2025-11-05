@@ -8,7 +8,7 @@ import * as d from "../../../../interface/generated/pareto/schemas/remove/data_t
 import { Signature } from "../../../../interface/algorithms/procedures/unguaranteed/remove"
 
 
-export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Errors> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Error> = (
     $p,
 ) => {
     const __possibly_escape_filename = (path: string, escape: boolean): string => {
@@ -30,7 +30,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Erro
                         if (err.code === 'ENOENT' && !$p['error if not exists']) {
                             on_success()
                         } else {
-                            on_exception(_ei.block((): d.Errors => {
+                            on_exception(_ei.block((): d.Error => {
                                 if (err.code === 'ENOENT') {
                                     return ['node does not exist', null]
                                 }

@@ -13,7 +13,7 @@ import { Signature } from "../../../../interface/algorithms/procedures/unguarant
  * The executable being executed is assumed to only cause side effects
  * and not return any meaningful data, std::out is therefor ignored
  */
-export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Errors> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Error> = (
     $p,
 ) => {
     const args = $p.args.__get_raw_copy()
@@ -31,7 +31,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Erro
             })
 
             child.on("error", err => {
-                on_exception(_ei.block((): d.Errors => {
+                on_exception(_ei.block((): d.Error => {
                     return ['failed to spawn', { message: err instanceof Error ? err.message : `${err}` }]
                 }))
             })
@@ -40,7 +40,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Erro
                 if (exitCode === 0) {
                     on_success()
                 } else {
-                    on_exception(_ei.block((): d.Errors => {
+                    on_exception(_ei.block((): d.Error => {
                         return ['non zero exit code', { exitCode: exitCode ?? -1, stderr: stderrData }]
                     }))
                 }
