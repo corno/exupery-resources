@@ -1,6 +1,7 @@
 import * as _et from "exupery-core-types"
 import * as _ea from "exupery-core-alg"
 import * as _ed from "exupery-core-dev"
+import * as _ei from "exupery-core-internals"
 
 import * as t from "../../../../interface/generated/pareto/core/astn_source"
 import * as unconstrained from "../../../../interface/generated/pareto/core/unconstrained"
@@ -24,7 +25,7 @@ export const process_unconstrained_state_group = <X>(
                     () => _ed.implement_me()
                 )
             })
-            default: return _ea.panic(`Unexpected type for state group: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for state group: ${$[0]}`)
         }
     })
 }
@@ -50,7 +51,7 @@ export const process_unresolved_state_group = <X>(
                     )
                 }
             })
-            default: return _ea.panic(`Unexpected type for state group: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for state group: ${$[0]}`)
         }
     })
 }
@@ -76,10 +77,10 @@ export const process_group = <X>(
                             })
                         }))
                     })
-                    default: return _ea.panic(`Unexpected type for group: ${$[0]}`)
+                    default: return _ei.panic(`Unexpected type for group: ${$[0]}`)
                 }
             }))
-            default: return _ea.panic(`Unexpected type for group: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for group: ${$[0]}`)
         }
     })
 }
@@ -93,7 +94,7 @@ export const get_entry = (
 ): t._T_Value => {
     return $.__get_entry($p.key).transform(
         ($) => $,
-        () => _ea.panic(`no such entry: ${$p.key}`)
+        () => _ei.panic(`no such entry: ${$p.key}`)
     )
 }
 
@@ -127,10 +128,10 @@ export const process_unresolved_dictionary = <X>(
                             })
                         }
                     })
-                    default: return _ea.panic(`Unexpected type for dictionary: ${$[0]}`)
+                    default: return _ei.panic(`Unexpected type for dictionary: ${$[0]}`)
                 }
             }))
-            default: return _ea.panic(`Unexpected type for dictionary: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for dictionary: ${$[0]}`)
         }
     })
 }
@@ -155,10 +156,10 @@ export const process_unconstrained_dictionary = <X>(
                             })
                         })
                     })
-                    default: return _ea.panic(`Unexpected type for dictionary: ${$[0]}`)
+                    default: return _ei.panic(`Unexpected type for dictionary: ${$[0]}`)
                 }
             }))
-            default: return _ea.panic(`Unexpected type for dictionary: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for dictionary: ${$[0]}`)
         }
     })
 }
@@ -173,7 +174,7 @@ export const process_number = (
     return _ea.cc($, ($) => {
         switch ($[0]) {
             case 'string': return _ea.ss($, ($) => $p.deserializer($.value, null))
-            default: return _ea.panic(`Unexpected type for number: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for number: ${$[0]}`)
 
         }
     })
@@ -189,7 +190,7 @@ export const process_boolean = (
     return _ea.cc($, ($) => {
         switch ($[0]) {
             case 'string': return _ea.ss($, ($) => $p.deserializer($.value, null))
-            default: return _ea.panic(`Unexpected type for boolean: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for boolean: ${$[0]}`)
         }
     })
 }
@@ -202,7 +203,7 @@ export const process_text = (
     return _ea.cc($, ($) => {
         switch ($[0]) {
             case 'string': return _ea.ss($, ($) => $.value)
-            default: return _ea.panic(`Unexpected type for text: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for text: ${$[0]}`)
         }
     })
 }
@@ -227,10 +228,10 @@ export const process_unresolved_list = <X>(
                             }))
                         }
                     })
-                    default: return _ea.panic(`Unexpected type for list: ${$[0]}`)
+                    default: return _ei.panic(`Unexpected type for list: ${$[0]}`)
                 }
             }))
-            default: return _ea.panic(`Unexpected type for list: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for list: ${$[0]}`)
         }
     })
 }
@@ -256,7 +257,7 @@ export const process_optional = <X>(
         switch ($[0]) {
             case 'not set': return _ea.ss($, ($) => _ea.not_set())
             case 'set optional value': return _ea.ss($, ($) => _ea.set($p.value($.value)))
-            default: return _ea.panic(`Unexpected type for nothing: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for nothing: ${$[0]}`)
 
         }
     })
@@ -269,7 +270,7 @@ export const process_nothing = (
     return _ea.cc($, ($) => {
         switch ($[0]) {
             case 'not set': return _ea.ss($, ($) => null)
-            default: return _ea.panic(`Unexpected type for nothing: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for nothing: ${$[0]}`)
 
         }
     })
@@ -285,7 +286,7 @@ export const process_selected_reference = <X>(
                 'key': $.value,
                 'location': $.range,
             }))
-            default: return _ea.panic(`Unexpected type for selected reference key: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for selected reference key: ${$[0]}`)
         }
     })
 }
@@ -300,7 +301,7 @@ export const process_stack_reference = <X>(
                 'key': $.value,
                 'location': $.range,
             }))
-            default: return _ea.panic(`Unexpected type for selected reference key: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for selected reference key: ${$[0]}`)
         }
     })
 }
@@ -312,7 +313,7 @@ export const process_derived_reference = (
     return _ea.cc($, ($) => {
         switch ($[0]) {
             case 'not set': return _ea.ss($, ($) => null)
-            default: return _ea.panic(`Unexpected type for derived reference: ${$[0]}`)
+            default: return _ei.panic(`Unexpected type for derived reference: ${$[0]}`)
 
         }
     })
