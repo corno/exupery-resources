@@ -33,7 +33,7 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Erro
                         if (err.code === 'EACCES' || err.code === 'EPERM') {
                             return ['permission denied', null]
                         }
-                        if (err.code === 'EISDIR' || err.code === 'ENOTDIR') {
+                        if (err.code === 'EISDIR' || err.code === 'ERR_FS_EISDIR') {
                             return ['node is not a file', null]
                         }
                         if (err.code === 'EFBIG') {
