@@ -31,12 +31,21 @@ export const Node_Type: _i_signatures._T_Node_Type = ($, $p) => ['state', _pa.cc
         default: return _pa.au($[0])
     }
 })]
-export const Parameters: _i_signatures._T_Parameters = ($, $p) => Path(
-    $,
-    {
-        'value serializers': $p['value serializers'],
-    }
-)
+export const Parameters: _i_signatures._T_Parameters = ($, $p) => ['verbose group', _pa.dictionary_literal({
+    'path': _pa.cc($['path'], ($) => Path(
+        $,
+        {
+            'value serializers': $p['value serializers'],
+        }
+    )),
+    'prepend results with path': _pa.cc($['prepend results with path'], ($) => ['text', ({
+        'delimiter': ['backtick', null],
+        'value': $p['value serializers']['boolean'](
+            $,
+            null
+        ),
+    })]),
+})]
 export const Path: _i_signatures._T_Path = ($, $p) => ['verbose group', _pa.dictionary_literal({
     'escape spaces in path': _pa.cc($['escape spaces in path'], ($) => ['text', ({
         'delimiter': ['backtick', null],

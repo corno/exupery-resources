@@ -37,10 +37,33 @@ export const Node_Type: _i_signatures._T_Node_Type = ($, $p) => _i_generic.proce
         }),
     }
 )
-export const Parameters: _i_signatures._T_Parameters = ($, $p) => Path(
+export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_generic.process_group(
     $,
     {
-        'value deserializers': $p['value deserializers'],
+        'properties': ($) => ({
+            'path': _pa.cc(_i_generic.get_entry(
+                $,
+                {
+                    'key': "path",
+                }
+            ), ($) => Path(
+                $,
+                {
+                    'value deserializers': $p['value deserializers'],
+                }
+            )),
+            'prepend results with path': _pa.cc(_i_generic.get_entry(
+                $,
+                {
+                    'key': "prepend results with path",
+                }
+            ), ($) => _i_generic.process_boolean(
+                $,
+                {
+                    'deserializer': $p['value deserializers']['boolean'],
+                }
+            )),
+        }),
     }
 )
 export const Path: _i_signatures._T_Path = ($, $p) => _i_generic.process_group(

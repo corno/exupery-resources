@@ -19,7 +19,7 @@ export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, 
     }
     return _easync.__create_unguaranteed_query({
         'execute': (on_value, on_exception) => {
-            fs_readdir(__possibly_escape_filename($p.path, $p['escape spaces in path']), {
+            fs_readdir(__possibly_escape_filename($p.path.path, $p.path['escape spaces in path']), {
                 'encoding': 'utf-8',
                 'withFileTypes': true,
             }, (err, files) => {
@@ -36,7 +36,7 @@ export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, 
                 } else {
                     const out: { [key: string]: d.Node_Type } = {}
                     files.forEach((file) => {
-                        out[file.name] = file.isFile() ? ['file', null] : ['directory', null]
+                        out[($p['prepend results with path'] ? ($p.path.path + "/" ) : "") + file.name] = file.isFile() ? ['file', null] : ['directory', null]
                     })
                     on_value(_ei.dictionary_literal(out))
                 }

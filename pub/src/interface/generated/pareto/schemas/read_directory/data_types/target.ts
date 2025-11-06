@@ -14,7 +14,10 @@ export type _T_Node_Type = _i_core._T_State_Group<null,
     | readonly ['file', null]
 >
 
-export type _T_Parameters = _T_Path
+export type _T_Parameters = {
+    readonly 'path': _T_Path
+    readonly 'prepend results with path': boolean
+}
 
 export type _T_Path = {
     readonly 'escape spaces in path': boolean
@@ -60,6 +63,11 @@ export namespace _T_Node_Type {
 }
 
 export namespace _T_Parameters {
+    
+    export namespace path {
+    }
+    export type path = _T_Path
+    export type prepend_results_with_path = boolean
 }
 
 export namespace _T_Path {
@@ -99,6 +107,11 @@ export namespace Node_Type {
 }
 
 export namespace Parameters {
+    
+    export namespace path {
+    }
+    export type path = _T_Path
+    export type prepend_results_with_path = boolean
 }
 
 export namespace Path {
