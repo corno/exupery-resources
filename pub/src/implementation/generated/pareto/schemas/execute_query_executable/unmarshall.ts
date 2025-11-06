@@ -31,15 +31,20 @@ export const Error: _i_signatures._T_Error = ($, $p) => _i_generic.process_uncon
                 $,
                 {
                     'properties': ($) => ({
-                        'exitCode': _pa.cc(_i_generic.get_entry(
+                        'exit code': _pa.cc(_i_generic.get_entry(
                             $,
                             {
-                                'key': "exitCode",
+                                'key': "exit code",
                             }
-                        ), ($) => _i_generic.process_number(
+                        ), ($) => _i_generic.process_optional(
                             $,
                             {
-                                'deserializer': $p['value deserializers']['default number'],
+                                'value': ($) => _i_generic.process_number(
+                                    $,
+                                    {
+                                        'deserializer': $p['value deserializers']['default number'],
+                                    }
+                                ),
                             }
                         )),
                         'stderr': _pa.cc(_i_generic.get_entry(

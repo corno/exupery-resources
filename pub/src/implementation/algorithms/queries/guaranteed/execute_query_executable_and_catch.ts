@@ -49,8 +49,8 @@ export const $$: _easync.Guaranteed_Query_Initializer<d.Parameters, d.Result> = 
                     }])
                 } else {
                     on_result(['error', ['non zero exit code', {
-                        exitCode: exitCode ?? -1,
-                        stderr: stderrData,
+                        'exit code': exitCode === null ? _ei.not_set() : _ei.set(exitCode),
+                        'stderr': stderrData,
                     }]])
                 }
             })

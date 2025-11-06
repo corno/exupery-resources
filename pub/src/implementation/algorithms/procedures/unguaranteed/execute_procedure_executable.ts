@@ -41,7 +41,10 @@ export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Erro
                     on_success()
                 } else {
                     on_exception(_ei.block((): d.Error => {
-                        return ['non zero exit code', { exitCode: exitCode ?? -1, stderr: stderrData }]
+                        return ['non zero exit code', {
+                            'exit code': exitCode === null ? _ei.not_set() : _ei.set(exitCode),
+                            'stderr': stderrData
+                        }]
                     }))
                 }
             })

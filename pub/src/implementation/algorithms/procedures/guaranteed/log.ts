@@ -11,7 +11,7 @@ export const $$: _easync.Guaranteed_Procedure_Initializer<d.Parameters> = (
     return _easync.__create_guaranted_procedure({
         'execute': (on_success) => {
             $p.lines.__for_each(($) => {
-                console.log($)
+                process.stdout.write($ + `\n`)
             })
             on_success()
         }

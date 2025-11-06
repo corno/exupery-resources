@@ -9,7 +9,7 @@ export type _T_Error = _i_core._T_State_Group<null,
         readonly 'message': string
     }]
     | readonly ['non zero exit code', {
-        readonly 'exitCode': number
+        readonly 'exit code': _pt.Optional_Value<number>
         readonly 'stderr': string
     }]
 >
@@ -48,11 +48,15 @@ export namespace _T_Error {
         }
         
         export namespace non_zero_exit_code {
-            export type exitCode = number
+            
+            export namespace exit_code {
+                export type O = number
+            }
+            export type exit_code = _pt.Optional_Value<number>
             export type stderr = string
         }
         export type non_zero_exit_code = {
-            readonly 'exitCode': number
+            readonly 'exit code': _pt.Optional_Value<number>
             readonly 'stderr': string
         }
     }
@@ -61,7 +65,7 @@ export namespace _T_Error {
             readonly 'message': string
         }]
         | readonly ['non zero exit code', {
-            readonly 'exitCode': number
+            readonly 'exit code': _pt.Optional_Value<number>
             readonly 'stderr': string
         }]
 }
@@ -111,11 +115,15 @@ export namespace Error {
         }
         
         export namespace non_zero_exit_code {
-            export type exitCode = number
+            
+            export namespace exit_code {
+                export type O = number
+            }
+            export type exit_code = _pt.Optional_Value<number>
             export type stderr = string
         }
         export type non_zero_exit_code = {
-            readonly 'exitCode': number
+            readonly 'exit code': _pt.Optional_Value<number>
             readonly 'stderr': string
         }
     }
@@ -124,7 +132,7 @@ export namespace Error {
             readonly 'message': string
         }]
         | readonly ['non zero exit code', {
-            readonly 'exitCode': number
+            readonly 'exit code': _pt.Optional_Value<number>
             readonly 'stderr': string
         }]
 }

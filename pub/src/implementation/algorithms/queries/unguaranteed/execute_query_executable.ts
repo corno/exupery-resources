@@ -46,14 +46,14 @@ export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, 
 
             child.on("close", exitCode => {
                 if (exitCode === 0) {
-                    on_value( {
+                    on_value({
                         stdout: stdoutData,
                     })
                 } else {
                     on_exception(_ei.block((): d.Error => {
                         return ['non zero exit code', {
-                            exitCode: exitCode ?? -1,
-                            stderr: stderrData,
+                            'exit code': exitCode === null ? _ei.not_set() : _ei.set(exitCode),
+                            'stderr': stderrData,
                         }]
                     }))
                 }

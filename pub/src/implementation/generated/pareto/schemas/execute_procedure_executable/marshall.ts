@@ -19,13 +19,16 @@ export const Error: _i_signatures._T_Error = ($, $p) => ['state', _pa.cc($, ($):
         case 'non zero exit code': return _pa.ss($, ($) => ({
             'state': "non zero exit code",
             'value': ['verbose group', _pa.dictionary_literal({
-                'exitCode': _pa.cc($['exitCode'], ($) => ['text', ({
-                    'delimiter': ['backtick', null],
-                    'value': $p['value serializers']['default number'](
-                        $,
-                        null
-                    ),
-                })]),
+                'exit code': _pa.cc($['exit code'], ($) => ['optional', $.transform(
+                    ($): _i_out._T_Value.SG.optional => ['set', ['text', ({
+                        'delimiter': ['backtick', null],
+                        'value': $p['value serializers']['default number'](
+                            $,
+                            null
+                        ),
+                    })]],
+                    () => ['not set', null]
+                )]),
                 'stderr': _pa.cc($['stderr'], ($) => ['text', ({
                     'delimiter': ['quote', null],
                     'value': $,
