@@ -9,7 +9,7 @@
   ],
   "dependencies": {
     "exupery-core-alg": "^0.5.0",
-    "exupery-core-async": "^0.3.3",
+    "exupery-core-async": "^0.3.4",
     "exupery-core-dev": "^0.3.0",
     "exupery-standard-library": "^0.3.0"
   },
