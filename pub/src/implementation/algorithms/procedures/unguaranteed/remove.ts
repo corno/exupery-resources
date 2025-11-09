@@ -8,7 +8,7 @@ import * as d from "../../../../interface/generated/pareto/schemas/remove/data_t
 import { Signature } from "../../../../interface/algorithms/procedures/unguaranteed/remove"
 
 
-export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Error> = (
+export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Error, null> = (
     $p,
 ) => {
     const __possibly_escape_filename = (path: string, escape: boolean): string => {

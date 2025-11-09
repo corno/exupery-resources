@@ -14,7 +14,7 @@ import { Signature } from "../../../../interface/algorithms/queries/unguaranteed
  * The executable being executed is assumed to be side effect free
  * There is no way to give guarantees about that though
  */
-export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Error> = (
+export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Error, null> = (
     $p
 ) => {
     const args = $p.args.__get_raw_copy()

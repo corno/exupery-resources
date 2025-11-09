@@ -5,7 +5,7 @@ import * as _et from 'exupery-core-types'
 import * as d from "../../../../interface/generated/pareto/schemas/log/data_types/target"
 import { Signature } from "../../../../interface/algorithms/procedures/guaranteed/log"
 
-export const $$: _easync.Guaranteed_Procedure_Initializer<d.Parameters> = (
+export const $$: _easync.Guaranteed_Procedure_Initializer<d.Parameters, null> = (
     $p,
 ) => {
     return _easync.__create_guaranted_procedure({

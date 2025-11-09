@@ -7,7 +7,7 @@ import * as d from "../../../../interface/generated/pareto/schemas/read_file/dat
 import { Signature } from "../../../../interface/algorithms/queries/unguaranteed/read_file"
 
 
-export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Error> = (
+export const $$: _easync.Unguaranteed_Query_Initializer<d.Parameters, d.Result, d.Error, null> = (
     $p
 ) => {
     const __possibly_escape_filename = (path: string, escape: boolean): string => {
