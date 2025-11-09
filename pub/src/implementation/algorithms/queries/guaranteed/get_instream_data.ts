@@ -6,7 +6,7 @@ import * as d from "../../../../interface/generated/pareto/schemas/get_instream_
 import { Signature } from "../../../../interface/algorithms/queries/guaranteed/get_instream_data"
 
 
-export const $$: _easync.Guaranteed_Query_Initializer<null, d.Result, null> = (
+export const $$: _easync.Guaranteed_Query<null, d.Result, null> = (
 ) => {
     return _easync.__create_guaranteed_query({
         'execute': (on_value) => {

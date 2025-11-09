@@ -6,7 +6,7 @@ import * as d from "../../../../interface/generated/pareto/schemas/log_error/dat
 import { Signature } from "../../../../interface/algorithms/procedures/guaranteed/log_error"
 
 
-export const $$: _easync.Guaranteed_Procedure_Initializer<d.Parameters, null> = (
+export const $$: _easync.Guaranteed_Procedure<d.Parameters, null> = (
     $p,
 ) => {
     return _easync.__create_guaranted_procedure({

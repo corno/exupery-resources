@@ -10,7 +10,7 @@ import * as d from "../../../../interface/generated/pareto/schemas/write_file/da
 import { Signature } from "../../../../interface/algorithms/procedures/unguaranteed/write_file"
 
 
-export const $$: _easync.Unguaranteed_Procedure_Initializer<d.Parameters, d.Error, null> = (
+export const $$: _easync.Unguaranteed_Procedure<d.Parameters, d.Error, null> = (
     $p,
 ) => {
     const __possibly_escape_filename = (path: string, escape: boolean): string => {
