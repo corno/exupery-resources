@@ -2,10 +2,10 @@ import * as _easync from 'exupery-core-async'
 import * as _ei from 'exupery-core-internals'
 import * as _et from 'exupery-core-types'
 
-import * as d from "../../../../interface/generated/pareto/schemas/execute_procedure_executable/data_types/target"
+import * as d from "../../../../interface/generated/pareto/schemas/execute_any_smelly_procedure_executable/data_types/target"
 
 import { spawn } from "node:child_process"
-import { Signature } from "../../../../interface/algorithms/procedures/unguaranteed/execute_procedure_executable"
+// import { Signature } from "../../../../interface/algorithms/procedures/unguaranteed/execute_smelly_procedure_executable"
 
 
 /**
@@ -26,6 +26,12 @@ export const $$: _easync.Unguaranteed_Procedure<d.Parameters, d.Error, null> = (
 
             let stderrData = ""
 
+            let stdoutData = ""
+
+            child.stdout.on("data", chunk => {
+                stdoutData += chunk.toString("utf8")
+            })
+
             child.stderr.on("data", chunk => {
                 stderrData += chunk.toString("utf8")
             })
@@ -37,13 +43,16 @@ export const $$: _easync.Unguaranteed_Procedure<d.Parameters, d.Error, null> = (
             })
 
             child.on("close", exitCode => {
+                //what does an exit code of null even mean?
+                
                 if (exitCode === 0) {
                     on_success()
                 } else {
                     on_exception(_ei.block((): d.Error => {
                         return ['non zero exit code', {
-                            'exit code': exitCode === null ? _ei.not_set() : _ei.set(exitCode),
-                            'stderr': stderrData
+                             'exit code': exitCode === null ? _ei.not_set() : _ei.set(exitCode),
+                            'stderr': stderrData,
+                            'stdout': stdoutData,
                         }]
                     }))
                 }

@@ -11,12 +11,12 @@ export type _T_Error = _i_core._T_State_Group<null,
     | readonly ['non zero exit code', {
         readonly 'exit code': _pt.Optional_Value<number>
         readonly 'stderr': string
-        readonly 'stdout': string
     }]
 >
 
 export type _T_Parameters = {
     readonly 'args': _i_core._T_List<null, string>
+    readonly 'program': string
 }
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
@@ -45,12 +45,10 @@ export namespace _T_Error {
             }
             export type exit_code = _pt.Optional_Value<number>
             export type stderr = string
-            export type stdout = string
         }
         export type non_zero_exit_code = {
             readonly 'exit code': _pt.Optional_Value<number>
             readonly 'stderr': string
-            readonly 'stdout': string
         }
     }
     export type SG = 
@@ -60,7 +58,6 @@ export namespace _T_Error {
         | readonly ['non zero exit code', {
             readonly 'exit code': _pt.Optional_Value<number>
             readonly 'stderr': string
-            readonly 'stdout': string
         }]
 }
 
@@ -70,6 +67,7 @@ export namespace _T_Parameters {
         export type L = string
     }
     export type args = _i_core._T_List<null, string>
+    export type program = string
 }
 
 // *** ALIASES FOR NESTED TYPES
@@ -92,12 +90,10 @@ export namespace Error {
             }
             export type exit_code = _pt.Optional_Value<number>
             export type stderr = string
-            export type stdout = string
         }
         export type non_zero_exit_code = {
             readonly 'exit code': _pt.Optional_Value<number>
             readonly 'stderr': string
-            readonly 'stdout': string
         }
     }
     export type SG = 
@@ -107,7 +103,6 @@ export namespace Error {
         | readonly ['non zero exit code', {
             readonly 'exit code': _pt.Optional_Value<number>
             readonly 'stderr': string
-            readonly 'stdout': string
         }]
 }
 
@@ -117,4 +112,5 @@ export namespace Parameters {
         export type L = string
     }
     export type args = _i_core._T_List<null, string>
+    export type program = string
 }

@@ -1,6 +1,6 @@
 import * as _pt from 'exupery-core-types'
 
-import * as _i_core from "../../../core/resolved"
+import * as _i_core from "../../../core/unconstrained"
 
 // **** TYPES
 
@@ -17,6 +17,7 @@ export type _T_Error = _i_core._T_State_Group<null,
 
 export type _T_Parameters = {
     readonly 'args': _i_core._T_List<null, string>
+    readonly 'program': string
 }
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
@@ -70,6 +71,7 @@ export namespace _T_Parameters {
         export type L = string
     }
     export type args = _i_core._T_List<null, string>
+    export type program = string
 }
 
 // *** ALIASES FOR NESTED TYPES
@@ -117,4 +119,5 @@ export namespace Parameters {
         export type L = string
     }
     export type args = _i_core._T_List<null, string>
+    export type program = string
 }

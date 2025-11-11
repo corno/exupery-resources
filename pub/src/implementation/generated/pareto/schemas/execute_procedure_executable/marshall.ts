@@ -43,8 +43,4 @@ export const Parameters: _i_signatures._T_Parameters = ($, $p) => ['verbose grou
         'delimiter': ['quote', null],
         'value': $,
     })])]),
-    'program': _pa.cc($['program'], ($) => ['text', ({
-        'delimiter': ['quote', null],
-        'value': $,
-    })]),
 })]

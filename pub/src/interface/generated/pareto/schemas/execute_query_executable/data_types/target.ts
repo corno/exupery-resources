@@ -16,7 +16,6 @@ export type _T_Error = _i_core._T_State_Group<null,
 
 export type _T_Parameters = {
     readonly 'args': _i_core._T_List<null, string>
-    readonly 'program': string
 }
 
 export type _T_Result = {
@@ -73,7 +72,6 @@ export namespace _T_Parameters {
         export type L = string
     }
     export type args = _i_core._T_List<null, string>
-    export type program = string
 }
 
 export namespace _T_Result {
@@ -122,7 +120,6 @@ export namespace Parameters {
         export type L = string
     }
     export type args = _i_core._T_List<null, string>
-    export type program = string
 }
 
 export namespace Result {

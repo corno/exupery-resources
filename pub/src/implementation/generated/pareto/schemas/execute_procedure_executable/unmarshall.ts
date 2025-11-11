@@ -80,15 +80,6 @@ export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_generic.pro
                     ),
                 }
             )),
-            'program': _pa.cc(_i_generic.get_entry(
-                $,
-                {
-                    'key': "program",
-                }
-            ), ($) => _i_generic.process_text(
-                $,
-                null
-            )),
         }),
     }
 )
