@@ -4,29 +4,42 @@ import * as _i_core from "../../../core/resolved"
 
 // **** TYPES
 
+export type _T_Path = {
+    readonly 'path': string
+    readonly 'escape spaces in path': boolean
+}
+
+export type _T_Parameters = {
+    readonly 'path': _T_Path
+    readonly 'data': string
+}
+
 export type _T_Error = _i_core._T_State_Group<null, 
     | readonly ['permission denied', null]
 >
 
-export type _T_Parameters = {
-    readonly 'data': string
-    readonly 'path': _T_Path
-}
-
-export type _T_Path = {
-    readonly 'escape spaces in path': boolean
-    readonly 'path': string
-}
-
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
-
-export type Error = _T_Error
-
-export type Parameters = _T_Parameters
 
 export type Path = _T_Path
 
+export type Parameters = _T_Parameters
+
+export type Error = _T_Error
+
 // **** ALIASES FOR NESTED TYPE WITH PREFIXED ROOT NAMES
+
+export namespace _T_Path {
+    export type path = string
+    export type escape_spaces_in_path = boolean
+}
+
+export namespace _T_Parameters {
+    
+    export namespace path {
+    }
+    export type path = _T_Path
+    export type data = string
+}
 
 export namespace _T_Error {
     
@@ -37,20 +50,20 @@ export namespace _T_Error {
         | readonly ['permission denied', null]
 }
 
-export namespace _T_Parameters {
-    export type data = string
+// *** ALIASES FOR NESTED TYPES
+
+export namespace Path {
+    export type path = string
+    export type escape_spaces_in_path = boolean
+}
+
+export namespace Parameters {
     
     export namespace path {
     }
     export type path = _T_Path
+    export type data = string
 }
-
-export namespace _T_Path {
-    export type escape_spaces_in_path = boolean
-    export type path = string
-}
-
-// *** ALIASES FOR NESTED TYPES
 
 export namespace Error {
     
@@ -59,17 +72,4 @@ export namespace Error {
     }
     export type SG = 
         | readonly ['permission denied', null]
-}
-
-export namespace Parameters {
-    export type data = string
-    
-    export namespace path {
-    }
-    export type path = _T_Path
-}
-
-export namespace Path {
-    export type escape_spaces_in_path = boolean
-    export type path = string
 }

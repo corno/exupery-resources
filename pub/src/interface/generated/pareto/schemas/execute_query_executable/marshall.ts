@@ -1,20 +1,20 @@
 import * as _pt from 'exupery-core-types'
 
-import * as _i_in from "./data_types/source"
 import * as _i_out from "../../core/astn_target"
+import * as _i_in from "./data_types/source"
 import * as _i_vs from "./value_serializers"
 
 // **** TYPES
 
-export type _T_Error = (
-    $$_: _i_in._T_Error,
+export type _T_Parameters = (
+    $$_: _i_in._T_Parameters,
     $$_p: {
         readonly 'value serializers': _i_vs._T_Value_Serializers
     },
 ) => _i_out._T_Value
 
-export type _T_Parameters = (
-    $$_: _i_in._T_Parameters,
+export type _T_Error = (
+    $$_: _i_in._T_Error,
     $$_p: {
         readonly 'value serializers': _i_vs._T_Value_Serializers
     },
@@ -29,19 +29,19 @@ export type _T_Result = (
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
 
-export type Error = _T_Error
-
 export type Parameters = _T_Parameters
+
+export type Error = _T_Error
 
 export type Result = _T_Result
 
 // **** ALIASES FOR NESTED TYPE WITH PREFIXED ROOT NAMES
 
-export namespace _T_Error {
+export namespace _T_Parameters {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Error
+    export type CONTEXT = _i_in._T_Parameters
     
     export namespace PARAMS {
         
@@ -55,11 +55,11 @@ export namespace _T_Error {
     export type RESULT = _i_out._T_Value
 }
 
-export namespace _T_Parameters {
+export namespace _T_Error {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Parameters
+    export type CONTEXT = _i_in._T_Error
     
     export namespace PARAMS {
         
@@ -93,11 +93,11 @@ export namespace _T_Result {
 
 // *** ALIASES FOR NESTED TYPES
 
-export namespace Error {
+export namespace Parameters {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Error
+    export type CONTEXT = _i_in._T_Parameters
     
     export namespace PARAMS {
         
@@ -111,11 +111,11 @@ export namespace Error {
     export type RESULT = _i_out._T_Value
 }
 
-export namespace Parameters {
+export namespace Error {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Parameters
+    export type CONTEXT = _i_in._T_Error
     
     export namespace PARAMS {
         

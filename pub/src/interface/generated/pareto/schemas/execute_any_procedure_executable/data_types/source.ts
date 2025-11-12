@@ -4,6 +4,11 @@ import * as _i_core from "../../../core/resolved"
 
 // **** TYPES
 
+export type _T_Parameters = {
+    readonly 'program': string
+    readonly 'args': _i_core._T_List<null, string>
+}
+
 export type _T_Error = _i_core._T_State_Group<null, 
     | readonly ['failed to spawn', {
         readonly 'message': string
@@ -14,18 +19,22 @@ export type _T_Error = _i_core._T_State_Group<null,
     }]
 >
 
-export type _T_Parameters = {
-    readonly 'args': _i_core._T_List<null, string>
-    readonly 'program': string
-}
-
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
-
-export type Error = _T_Error
 
 export type Parameters = _T_Parameters
 
+export type Error = _T_Error
+
 // **** ALIASES FOR NESTED TYPE WITH PREFIXED ROOT NAMES
+
+export namespace _T_Parameters {
+    export type program = string
+    
+    export namespace args {
+        export type L = string
+    }
+    export type args = _i_core._T_List<null, string>
+}
 
 export namespace _T_Error {
     
@@ -61,16 +70,16 @@ export namespace _T_Error {
         }]
 }
 
-export namespace _T_Parameters {
+// *** ALIASES FOR NESTED TYPES
+
+export namespace Parameters {
+    export type program = string
     
     export namespace args {
         export type L = string
     }
     export type args = _i_core._T_List<null, string>
-    export type program = string
 }
-
-// *** ALIASES FOR NESTED TYPES
 
 export namespace Error {
     
@@ -104,13 +113,4 @@ export namespace Error {
             readonly 'exit code': _pt.Optional_Value<number>
             readonly 'stderr': string
         }]
-}
-
-export namespace Parameters {
-    
-    export namespace args {
-        export type L = string
-    }
-    export type args = _i_core._T_List<null, string>
-    export type program = string
 }

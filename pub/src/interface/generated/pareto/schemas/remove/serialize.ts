@@ -5,8 +5,8 @@ import * as _i_vs from "./value_serializers"
 
 // **** TYPES
 
-export type _T_Error = (
-    $$_: _i_in._T_Error,
+export type _T_Path = (
+    $$_: _i_in._T_Path,
     $$_p: {
         readonly 'value serializers': _i_vs._T_Value_Serializers
     },
@@ -19,8 +19,8 @@ export type _T_Parameters = (
     },
 ) => string
 
-export type _T_Path = (
-    $$_: _i_in._T_Path,
+export type _T_Error = (
+    $$_: _i_in._T_Error,
     $$_p: {
         readonly 'value serializers': _i_vs._T_Value_Serializers
     },
@@ -28,19 +28,19 @@ export type _T_Path = (
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
 
-export type Error = _T_Error
+export type Path = _T_Path
 
 export type Parameters = _T_Parameters
 
-export type Path = _T_Path
+export type Error = _T_Error
 
 // **** ALIASES FOR NESTED TYPE WITH PREFIXED ROOT NAMES
 
-export namespace _T_Error {
+export namespace _T_Path {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Error
+    export type CONTEXT = _i_in._T_Path
     
     export namespace PARAMS {
         
@@ -66,11 +66,11 @@ export namespace _T_Parameters {
     export type RESULT = string
 }
 
-export namespace _T_Path {
+export namespace _T_Error {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Path
+    export type CONTEXT = _i_in._T_Error
     
     export namespace PARAMS {
         
@@ -83,11 +83,11 @@ export namespace _T_Path {
 
 // *** ALIASES FOR NESTED TYPES
 
-export namespace Error {
+export namespace Path {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Error
+    export type CONTEXT = _i_in._T_Path
     
     export namespace PARAMS {
         
@@ -113,11 +113,11 @@ export namespace Parameters {
     export type RESULT = string
 }
 
-export namespace Path {
+export namespace Error {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Path
+    export type CONTEXT = _i_in._T_Error
     
     export namespace PARAMS {
         

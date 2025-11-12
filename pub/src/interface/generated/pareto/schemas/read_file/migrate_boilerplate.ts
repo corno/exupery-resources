@@ -1,24 +1,24 @@
 import * as _pt from 'exupery-core-types'
 
-import * as _i_in from "./data_types/source"
 import * as _i_out from "./data_types/target"
+import * as _i_in from "./data_types/source"
 
 // **** TYPES
 
-export type _T_Error = (
-    $$_: _i_in._T_Error,
+export type _T_Path = (
+    $$_: _i_in._T_Path,
     $$_p: null,
-) => _i_out._T_Error
+) => _i_out._T_Path
 
 export type _T_Parameters = (
     $$_: _i_in._T_Parameters,
     $$_p: null,
 ) => _i_out._T_Parameters
 
-export type _T_Path = (
-    $$_: _i_in._T_Path,
+export type _T_Error = (
+    $$_: _i_in._T_Error,
     $$_p: null,
-) => _i_out._T_Path
+) => _i_out._T_Error
 
 export type _T_Result = (
     $$_: _i_in._T_Result,
@@ -27,28 +27,28 @@ export type _T_Result = (
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
 
-export type Error = _T_Error
+export type Path = _T_Path
 
 export type Parameters = _T_Parameters
 
-export type Path = _T_Path
+export type Error = _T_Error
 
 export type Result = _T_Result
 
 // **** ALIASES FOR NESTED TYPE WITH PREFIXED ROOT NAMES
 
-export namespace _T_Error {
+export namespace _T_Path {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Error
+    export type CONTEXT = _i_in._T_Path
     
     export namespace PARAMS {
     }
     
     export namespace RESULT {
     }
-    export type RESULT = _i_out._T_Error
+    export type RESULT = _i_out._T_Path
 }
 
 export namespace _T_Parameters {
@@ -65,18 +65,18 @@ export namespace _T_Parameters {
     export type RESULT = _i_out._T_Parameters
 }
 
-export namespace _T_Path {
+export namespace _T_Error {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Path
+    export type CONTEXT = _i_in._T_Error
     
     export namespace PARAMS {
     }
     
     export namespace RESULT {
     }
-    export type RESULT = _i_out._T_Path
+    export type RESULT = _i_out._T_Error
 }
 
 export namespace _T_Result {
@@ -95,18 +95,18 @@ export namespace _T_Result {
 
 // *** ALIASES FOR NESTED TYPES
 
-export namespace Error {
+export namespace Path {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Error
+    export type CONTEXT = _i_in._T_Path
     
     export namespace PARAMS {
     }
     
     export namespace RESULT {
     }
-    export type RESULT = _i_out._T_Error
+    export type RESULT = _i_out._T_Path
 }
 
 export namespace Parameters {
@@ -123,18 +123,18 @@ export namespace Parameters {
     export type RESULT = _i_out._T_Parameters
 }
 
-export namespace Path {
+export namespace Error {
     
     export namespace CONTEXT {
     }
-    export type CONTEXT = _i_in._T_Path
+    export type CONTEXT = _i_in._T_Error
     
     export namespace PARAMS {
     }
     
     export namespace RESULT {
     }
-    export type RESULT = _i_out._T_Path
+    export type RESULT = _i_out._T_Error
 }
 
 export namespace Result {

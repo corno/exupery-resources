@@ -4,9 +4,13 @@ import * as _i_core from "../../../core/unconstrained"
 
 // **** TYPES
 
+export type _T_Parameters = null
+
 export type _T_Result = string
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
+
+export type Parameters = _T_Parameters
 
 export type Result = _T_Result
 

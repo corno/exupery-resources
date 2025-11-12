@@ -2,35 +2,35 @@ import * as _pa from 'exupery-core-alg'
 import * as _pd from 'exupery-core-dev'
 
 import * as _i_generic from "../../generic/unmarshall"
+import * as _i_signatures from "../../../../../interface/generated/pareto/schemas/copy/unmarshall"
 import * as _i_in from "../../../../../interface/generated/pareto/core/astn_source"
 import * as _i_out from "../../../../../interface/generated/pareto/schemas/copy/data_types/target"
-import * as _i_signatures from "../../../../../interface/generated/pareto/schemas/copy/unmarshall"
 
 
-export const Error: _i_signatures._T_Error = ($, $p) => _i_generic.process_unconstrained_state_group(
+export const Path: _i_signatures._T_Path = ($, $p) => _i_generic.process_group(
     $,
     {
-        'states': _pa.dictionary_literal({
-            'device not ready': ($): _i_out._T_Error.SG => ['device not ready', _i_generic.process_nothing(
+        'properties': ($) => ({
+            'path': _pa.cc(_i_generic.get_entry(
+                $,
+                {
+                    'key': "path",
+                }
+            ), ($) => _i_generic.process_text(
                 $,
                 null
-            )],
-            'file too large': ($): _i_out._T_Error.SG => ['file too large', _i_generic.process_nothing(
+            )),
+            'escape spaces in path': _pa.cc(_i_generic.get_entry(
                 $,
-                null
-            )],
-            'node is not a file': ($): _i_out._T_Error.SG => ['node is not a file', _i_generic.process_nothing(
+                {
+                    'key': "escape spaces in path",
+                }
+            ), ($) => _i_generic.process_boolean(
                 $,
-                null
-            )],
-            'permission denied': ($): _i_out._T_Error.SG => ['permission denied', _i_generic.process_nothing(
-                $,
-                null
-            )],
-            'source does not exist': ($): _i_out._T_Error.SG => ['source does not exist', _i_generic.process_nothing(
-                $,
-                null
-            )],
+                {
+                    'deserializer': $p['value deserializers']['boolean'],
+                }
+            )),
         }),
     }
 )
@@ -38,6 +38,28 @@ export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_generic.pro
     $,
     {
         'properties': ($) => ({
+            'source': _pa.cc(_i_generic.get_entry(
+                $,
+                {
+                    'key': "source",
+                }
+            ), ($) => Path(
+                $,
+                {
+                    'value deserializers': $p['value deserializers'],
+                }
+            )),
+            'target': _pa.cc(_i_generic.get_entry(
+                $,
+                {
+                    'key': "target",
+                }
+            ), ($) => Path(
+                $,
+                {
+                    'value deserializers': $p['value deserializers'],
+                }
+            )),
             'options': _pa.cc(_i_generic.get_entry(
                 $,
                 {
@@ -47,10 +69,10 @@ export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_generic.pro
                 $,
                 {
                     'properties': ($) => ({
-                        'errorOnExist': _pa.cc(_i_generic.get_entry(
+                        'recursive': _pa.cc(_i_generic.get_entry(
                             $,
                             {
-                                'key': "errorOnExist",
+                                'key': "recursive",
                             }
                         ), ($) => _i_generic.process_optional(
                             $,
@@ -79,10 +101,10 @@ export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_generic.pro
                                 ),
                             }
                         )),
-                        'recursive': _pa.cc(_i_generic.get_entry(
+                        'errorOnExist': _pa.cc(_i_generic.get_entry(
                             $,
                             {
-                                'key': "recursive",
+                                'key': "errorOnExist",
                             }
                         ), ($) => _i_generic.process_optional(
                             $,
@@ -98,55 +120,33 @@ export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_generic.pro
                     }),
                 }
             )),
-            'source': _pa.cc(_i_generic.get_entry(
-                $,
-                {
-                    'key': "source",
-                }
-            ), ($) => Path(
-                $,
-                {
-                    'value deserializers': $p['value deserializers'],
-                }
-            )),
-            'target': _pa.cc(_i_generic.get_entry(
-                $,
-                {
-                    'key': "target",
-                }
-            ), ($) => Path(
-                $,
-                {
-                    'value deserializers': $p['value deserializers'],
-                }
-            )),
         }),
     }
 )
-export const Path: _i_signatures._T_Path = ($, $p) => _i_generic.process_group(
+export const Error: _i_signatures._T_Error = ($, $p) => _i_generic.process_unconstrained_state_group(
     $,
     {
-        'properties': ($) => ({
-            'escape spaces in path': _pa.cc(_i_generic.get_entry(
-                $,
-                {
-                    'key': "escape spaces in path",
-                }
-            ), ($) => _i_generic.process_boolean(
-                $,
-                {
-                    'deserializer': $p['value deserializers']['boolean'],
-                }
-            )),
-            'path': _pa.cc(_i_generic.get_entry(
-                $,
-                {
-                    'key': "path",
-                }
-            ), ($) => _i_generic.process_text(
+        'states': _pa.dictionary_literal({
+            'source does not exist': ($): _i_out._T_Error.SG => ['source does not exist', _i_generic.process_nothing(
                 $,
                 null
-            )),
+            )],
+            'node is not a file': ($): _i_out._T_Error.SG => ['node is not a file', _i_generic.process_nothing(
+                $,
+                null
+            )],
+            'permission denied': ($): _i_out._T_Error.SG => ['permission denied', _i_generic.process_nothing(
+                $,
+                null
+            )],
+            'file too large': ($): _i_out._T_Error.SG => ['file too large', _i_generic.process_nothing(
+                $,
+                null
+            )],
+            'device not ready': ($): _i_out._T_Error.SG => ['device not ready', _i_generic.process_nothing(
+                $,
+                null
+            )],
         }),
     }
 )

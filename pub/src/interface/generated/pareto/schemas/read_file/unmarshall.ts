@@ -1,17 +1,17 @@
 import * as _pt from 'exupery-core-types'
 
-import * as _i_in from "../../core/astn_source"
 import * as _i_out from "./data_types/target"
+import * as _i_in from "../../core/astn_source"
 import * as _i_vd from "./value_deserializers"
 
 // **** TYPES
 
-export type _T_Error = (
+export type _T_Path = (
     $$_: _i_in._T_Value,
     $$_p: {
         readonly 'value deserializers': _i_vd._T_Value_Deserializers
     },
-) => _i_out._T_Error
+) => _i_out._T_Path
 
 export type _T_Parameters = (
     $$_: _i_in._T_Value,
@@ -20,12 +20,12 @@ export type _T_Parameters = (
     },
 ) => _i_out._T_Parameters
 
-export type _T_Path = (
+export type _T_Error = (
     $$_: _i_in._T_Value,
     $$_p: {
         readonly 'value deserializers': _i_vd._T_Value_Deserializers
     },
-) => _i_out._T_Path
+) => _i_out._T_Error
 
 export type _T_Result = (
     $$_: _i_in._T_Value,
@@ -36,17 +36,17 @@ export type _T_Result = (
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
 
-export type Error = _T_Error
+export type Path = _T_Path
 
 export type Parameters = _T_Parameters
 
-export type Path = _T_Path
+export type Error = _T_Error
 
 export type Result = _T_Result
 
 // **** ALIASES FOR NESTED TYPE WITH PREFIXED ROOT NAMES
 
-export namespace _T_Error {
+export namespace _T_Path {
     
     export namespace CONTEXT {
     }
@@ -61,7 +61,7 @@ export namespace _T_Error {
     
     export namespace RESULT {
     }
-    export type RESULT = _i_out._T_Error
+    export type RESULT = _i_out._T_Path
 }
 
 export namespace _T_Parameters {
@@ -82,7 +82,7 @@ export namespace _T_Parameters {
     export type RESULT = _i_out._T_Parameters
 }
 
-export namespace _T_Path {
+export namespace _T_Error {
     
     export namespace CONTEXT {
     }
@@ -97,7 +97,7 @@ export namespace _T_Path {
     
     export namespace RESULT {
     }
-    export type RESULT = _i_out._T_Path
+    export type RESULT = _i_out._T_Error
 }
 
 export namespace _T_Result {
@@ -120,7 +120,7 @@ export namespace _T_Result {
 
 // *** ALIASES FOR NESTED TYPES
 
-export namespace Error {
+export namespace Path {
     
     export namespace CONTEXT {
     }
@@ -135,7 +135,7 @@ export namespace Error {
     
     export namespace RESULT {
     }
-    export type RESULT = _i_out._T_Error
+    export type RESULT = _i_out._T_Path
 }
 
 export namespace Parameters {
@@ -156,7 +156,7 @@ export namespace Parameters {
     export type RESULT = _i_out._T_Parameters
 }
 
-export namespace Path {
+export namespace Error {
     
     export namespace CONTEXT {
     }
@@ -171,7 +171,7 @@ export namespace Path {
     
     export namespace RESULT {
     }
-    export type RESULT = _i_out._T_Path
+    export type RESULT = _i_out._T_Error
 }
 
 export namespace Result {

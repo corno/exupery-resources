@@ -4,6 +4,11 @@ import * as _i_core from "../../../core/unconstrained"
 
 // **** TYPES
 
+export type _T_Parameters = {
+    readonly 'program': string
+    readonly 'args': _i_core._T_List<null, string>
+}
+
 export type _T_Error = _i_core._T_State_Group<null, 
     | readonly ['failed to spawn', {
         readonly 'message': string
@@ -14,27 +19,31 @@ export type _T_Error = _i_core._T_State_Group<null,
     }]
 >
 
-export type _T_Parameters = {
-    readonly 'args': _i_core._T_List<null, string>
-    readonly 'program': string
-}
-
 export type _T_Result = _i_core._T_State_Group<null, 
-    | readonly ['error', _T_Error]
     | readonly ['success', {
         readonly 'stdout': string
     }]
+    | readonly ['error', _T_Error]
 >
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
 
-export type Error = _T_Error
-
 export type Parameters = _T_Parameters
+
+export type Error = _T_Error
 
 export type Result = _T_Result
 
 // **** ALIASES FOR NESTED TYPE WITH PREFIXED ROOT NAMES
+
+export namespace _T_Parameters {
+    export type program = string
+    
+    export namespace args {
+        export type L = string
+    }
+    export type args = _i_core._T_List<null, string>
+}
 
 export namespace _T_Error {
     
@@ -70,22 +79,9 @@ export namespace _T_Error {
         }]
 }
 
-export namespace _T_Parameters {
-    
-    export namespace args {
-        export type L = string
-    }
-    export type args = _i_core._T_List<null, string>
-    export type program = string
-}
-
 export namespace _T_Result {
     
     export namespace SG {
-        
-        export namespace error {
-        }
-        export type error = _T_Error
         
         export namespace success {
             export type stdout = string
@@ -93,15 +89,28 @@ export namespace _T_Result {
         export type success = {
             readonly 'stdout': string
         }
+        
+        export namespace error {
+        }
+        export type error = _T_Error
     }
     export type SG = 
-        | readonly ['error', _T_Error]
         | readonly ['success', {
             readonly 'stdout': string
         }]
+        | readonly ['error', _T_Error]
 }
 
 // *** ALIASES FOR NESTED TYPES
+
+export namespace Parameters {
+    export type program = string
+    
+    export namespace args {
+        export type L = string
+    }
+    export type args = _i_core._T_List<null, string>
+}
 
 export namespace Error {
     
@@ -137,22 +146,9 @@ export namespace Error {
         }]
 }
 
-export namespace Parameters {
-    
-    export namespace args {
-        export type L = string
-    }
-    export type args = _i_core._T_List<null, string>
-    export type program = string
-}
-
 export namespace Result {
     
     export namespace SG {
-        
-        export namespace error {
-        }
-        export type error = _T_Error
         
         export namespace success {
             export type stdout = string
@@ -160,10 +156,14 @@ export namespace Result {
         export type success = {
             readonly 'stdout': string
         }
+        
+        export namespace error {
+        }
+        export type error = _T_Error
     }
     export type SG = 
-        | readonly ['error', _T_Error]
         | readonly ['success', {
             readonly 'stdout': string
         }]
+        | readonly ['error', _T_Error]
 }
