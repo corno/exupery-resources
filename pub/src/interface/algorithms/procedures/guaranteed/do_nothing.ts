@@ -1,3 +1,3 @@
-import * as _easync from 'exupery-core-async'
+import * as _et from 'exupery-core-types'
 
-export type Signature = _easync.Guaranteed_Procedure<null, null>
+export type Signature = _et.Guaranteed_Procedure<null, null>
