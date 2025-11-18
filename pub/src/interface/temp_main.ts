@@ -1,7 +1,7 @@
 import * as _et from 'exupery-core-types'
 
 export type Parameters = {
-    'arguments': _et.Array<string>,
+    'arguments': _et.List<string>,
 }
 
 export type Error = {

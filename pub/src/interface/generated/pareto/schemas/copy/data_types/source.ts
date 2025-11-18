@@ -1,4 +1,4 @@
-import * as _pt from 'exupery-core-types'
+import * as _et from 'exupery-core-types'
 
 import * as _i_core from "../../../core/resolved"
 
@@ -13,9 +13,9 @@ export type _T_Parameters = {
     readonly 'source': _T_Path
     readonly 'target': _T_Path
     readonly 'options': {
-        readonly 'recursive': _pt.Optional_Value<boolean>
-        readonly 'force': _pt.Optional_Value<boolean>
-        readonly 'errorOnExist': _pt.Optional_Value<boolean>
+        readonly 'recursive': _et.Optional_Value<boolean>
+        readonly 'force': _et.Optional_Value<boolean>
+        readonly 'errorOnExist': _et.Optional_Value<boolean>
     }
 }
 
@@ -57,22 +57,22 @@ export namespace _T_Parameters {
         export namespace recursive {
             export type O = boolean
         }
-        export type recursive = _pt.Optional_Value<boolean>
+        export type recursive = _et.Optional_Value<boolean>
         
         export namespace force {
             export type O = boolean
         }
-        export type force = _pt.Optional_Value<boolean>
+        export type force = _et.Optional_Value<boolean>
         
         export namespace errorOnExist {
             export type O = boolean
         }
-        export type errorOnExist = _pt.Optional_Value<boolean>
+        export type errorOnExist = _et.Optional_Value<boolean>
     }
     export type options = {
-        readonly 'recursive': _pt.Optional_Value<boolean>
-        readonly 'force': _pt.Optional_Value<boolean>
-        readonly 'errorOnExist': _pt.Optional_Value<boolean>
+        readonly 'recursive': _et.Optional_Value<boolean>
+        readonly 'force': _et.Optional_Value<boolean>
+        readonly 'errorOnExist': _et.Optional_Value<boolean>
     }
 }
 
@@ -115,22 +115,22 @@ export namespace Parameters {
         export namespace recursive {
             export type O = boolean
         }
-        export type recursive = _pt.Optional_Value<boolean>
+        export type recursive = _et.Optional_Value<boolean>
         
         export namespace force {
             export type O = boolean
         }
-        export type force = _pt.Optional_Value<boolean>
+        export type force = _et.Optional_Value<boolean>
         
         export namespace errorOnExist {
             export type O = boolean
         }
-        export type errorOnExist = _pt.Optional_Value<boolean>
+        export type errorOnExist = _et.Optional_Value<boolean>
     }
     export type options = {
-        readonly 'recursive': _pt.Optional_Value<boolean>
-        readonly 'force': _pt.Optional_Value<boolean>
-        readonly 'errorOnExist': _pt.Optional_Value<boolean>
+        readonly 'recursive': _et.Optional_Value<boolean>
+        readonly 'force': _et.Optional_Value<boolean>
+        readonly 'errorOnExist': _et.Optional_Value<boolean>
     }
 }
 

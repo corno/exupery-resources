@@ -34,7 +34,7 @@ export type String_Iterator = {
     'get line indentation': () => number
 }
 
-import { $$ as op_to_character_list } from "exupery-standard-library/dist/implementation/algorithms/operations/impure/text/to_character_list"
+import { text_to_character_list as op_to_character_list } from 'exupery-core-alg/dist/text_to_character_list'
 
 const WhitespaceChars = {
     tab: 0x09,                  // \t
@@ -169,6 +169,6 @@ export const create_string_iterator = (
 }
 
 export type Token_Iterator<Expected, Token> = {
-    'get required token': (expected: _et.Array<Expected>) => Token,
+    'get required token': (expected: _et.List<Expected>) => Token,
     'consume token': () => void,
 }
