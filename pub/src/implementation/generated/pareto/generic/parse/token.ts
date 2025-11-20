@@ -1,4 +1,4 @@
-import * as _ea from 'exupery-core-alg'
+import * as _ea from 'exupery-core-alg' 
 import * as _et from 'exupery-core-types'
 
 import * as _out from "../../../../../interface/generated/pareto/core/token"
@@ -11,7 +11,6 @@ import { $$ as op_from_character_list } from "pareto-standard-operations/dist/im
 import { $$ as op_parse_hexadecimal } from "pareto-standard-operations/dist/implementation/algorithms/integer/hexadecimal/deserializer"
 
 //this file contains the tokenizer functionality, each functoin return a type from the 'token' schema
-
 
 const WhitespaceChars = {
     tab: 0x09,                  // \t

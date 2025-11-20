@@ -49,17 +49,6 @@ export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_generic.pro
                     'value deserializers': $p['value deserializers'],
                 }
             )),
-            'prepend results with path': _pa.cc(_i_generic.get_entry(
-                $,
-                {
-                    'key': "prepend results with path",
-                }
-            ), ($) => _i_generic.process_boolean(
-                $,
-                {
-                    'deserializer': $p['value deserializers']['boolean'],
-                }
-            )),
         }),
     }
 )
@@ -96,10 +85,31 @@ export const Node_Type: _i_signatures._T_Node_Type = ($, $p) => _i_generic.proce
 export const Result: _i_signatures._T_Result = ($, $p) => _i_generic.process_unconstrained_dictionary(
     $,
     {
-        'value': ($) => Node_Type(
+        'value': ($) => _i_generic.process_group(
             $,
             {
-                'value deserializers': $p['value deserializers'],
+                'properties': ($) => ({
+                    'concatenated path': _pa.cc(_i_generic.get_entry(
+                        $,
+                        {
+                            'key': "concatenated path",
+                        }
+                    ), ($) => _i_generic.process_text(
+                        $,
+                        null
+                    )),
+                    'node type': _pa.cc(_i_generic.get_entry(
+                        $,
+                        {
+                            'key': "node type",
+                        }
+                    ), ($) => Node_Type(
+                        $,
+                        {
+                            'value deserializers': $p['value deserializers'],
+                        }
+                    )),
+                }),
             }
         ),
     }

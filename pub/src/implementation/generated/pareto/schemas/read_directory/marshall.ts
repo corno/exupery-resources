@@ -25,13 +25,6 @@ export const Parameters: _i_signatures._T_Parameters = ($, $p) => ['verbose grou
             'value serializers': $p['value serializers'],
         }
     )),
-    'prepend results with path': _pa.cc($['prepend results with path'], ($) => ['text', ({
-        'delimiter': ['backtick', null],
-        'value': $p['value serializers']['boolean'](
-            $,
-            null
-        ),
-    })]),
 })]
 export const Error: _i_signatures._T_Error = ($, $p) => ['state', _pa.cc($, ($): _i_out._T_Value.SG.state => {
     switch ($[0]) {
@@ -59,9 +52,15 @@ export const Node_Type: _i_signatures._T_Node_Type = ($, $p) => ['state', _pa.cc
         default: return _pa.au($[0])
     }
 })]
-export const Result: _i_signatures._T_Result = ($, $p) => ['dictionary', $.map(($) => Node_Type(
-    $,
-    {
-        'value serializers': $p['value serializers'],
-    }
-))]
+export const Result: _i_signatures._T_Result = ($, $p) => ['dictionary', $.map(($) => ['verbose group', _pa.dictionary_literal({
+    'concatenated path': _pa.cc($['concatenated path'], ($) => ['text', ({
+        'delimiter': ['quote', null],
+        'value': $,
+    })]),
+    'node type': _pa.cc($['node type'], ($) => Node_Type(
+        $,
+        {
+            'value serializers': $p['value serializers'],
+        }
+    )),
+})])]

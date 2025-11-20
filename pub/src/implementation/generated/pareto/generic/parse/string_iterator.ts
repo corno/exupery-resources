@@ -1,7 +1,6 @@
 import * as _ea from 'exupery-core-alg'
 import * as _et from 'exupery-core-types'
 
-
 //language independent parser functionality
 
 export type Location = {

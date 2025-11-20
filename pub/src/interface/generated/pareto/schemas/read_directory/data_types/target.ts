@@ -11,7 +11,6 @@ export type _T_Path = {
 
 export type _T_Parameters = {
     readonly 'path': _T_Path
-    readonly 'prepend results with path': boolean
 }
 
 export type _T_Error = _i_core._T_State_Group<null, 
@@ -24,7 +23,10 @@ export type _T_Node_Type = _i_core._T_State_Group<null,
     | readonly ['directory', null]
 >
 
-export type _T_Result = _i_core._T_Dictionary<null, _T_Node_Type>
+export type _T_Result = _i_core._T_Dictionary<null, {
+    readonly 'concatenated path': string
+    readonly 'node type': _T_Node_Type
+}>
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
 
@@ -50,7 +52,6 @@ export namespace _T_Parameters {
     export namespace path {
     }
     export type path = _T_Path
-    export type prepend_results_with_path = boolean
 }
 
 export namespace _T_Error {
@@ -78,8 +79,16 @@ export namespace _T_Node_Type {
 export namespace _T_Result {
     
     export namespace D {
+        export type concatenated_path = string
+        
+        export namespace node_type {
+        }
+        export type node_type = _T_Node_Type
     }
-    export type D = _T_Node_Type
+    export type D = {
+        readonly 'concatenated path': string
+        readonly 'node type': _T_Node_Type
+    }
 }
 
 // *** ALIASES FOR NESTED TYPES
@@ -94,7 +103,6 @@ export namespace Parameters {
     export namespace path {
     }
     export type path = _T_Path
-    export type prepend_results_with_path = boolean
 }
 
 export namespace Error {
@@ -122,6 +130,14 @@ export namespace Node_Type {
 export namespace Result {
     
     export namespace D {
+        export type concatenated_path = string
+        
+        export namespace node_type {
+        }
+        export type node_type = _T_Node_Type
     }
-    export type D = _T_Node_Type
+    export type D = {
+        readonly 'concatenated path': string
+        readonly 'node type': _T_Node_Type
+    }
 }
