@@ -1,8 +1,0 @@
-Repository: exupery-resources
-Path: /home/corno/workspace/pareto-canon/packages/exupery-resources
-Last Commit: 2025-11-07 (631a655)
-Message: new version
-Branch: main
-Remote: git@github.com:corno/exupery-resources
--------------------------------------------------
-
