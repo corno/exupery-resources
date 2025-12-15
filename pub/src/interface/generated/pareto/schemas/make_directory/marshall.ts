@@ -6,13 +6,6 @@ import * as _i_vs from "./value_serializers"
 
 // **** TYPES
 
-export type _T_Path = (
-    $$_: _i_in._T_Path,
-    $$_p: {
-        readonly 'value serializers': _i_vs._T_Value_Serializers
-    },
-) => _i_out._T_Value
-
 export type _T_Parameters = (
     $$_: _i_in._T_Parameters,
     $$_p: {
@@ -29,31 +22,11 @@ export type _T_Error = (
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
 
-export type Path = _T_Path
-
 export type Parameters = _T_Parameters
 
 export type Error = _T_Error
 
 // **** ALIASES FOR NESTED TYPE WITH PREFIXED ROOT NAMES
-
-export namespace _T_Path {
-    
-    export namespace CONTEXT {
-    }
-    export type CONTEXT = _i_in._T_Path
-    
-    export namespace PARAMS {
-        
-        export namespace value_serializers {
-        }
-        export type value_serializers = _i_vs._T_Value_Serializers
-    }
-    
-    export namespace RESULT {
-    }
-    export type RESULT = _i_out._T_Value
-}
 
 export namespace _T_Parameters {
     
@@ -92,24 +65,6 @@ export namespace _T_Error {
 }
 
 // *** ALIASES FOR NESTED TYPES
-
-export namespace Path {
-    
-    export namespace CONTEXT {
-    }
-    export type CONTEXT = _i_in._T_Path
-    
-    export namespace PARAMS {
-        
-        export namespace value_serializers {
-        }
-        export type value_serializers = _i_vs._T_Value_Serializers
-    }
-    
-    export namespace RESULT {
-    }
-    export type RESULT = _i_out._T_Value
-}
 
 export namespace Parameters {
     
