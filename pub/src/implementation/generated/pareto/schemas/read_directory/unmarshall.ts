@@ -5,35 +5,9 @@ import * as _i_generic from "../../generic/unmarshall"
 import * as _i_signatures from "../../../../../interface/generated/pareto/schemas/read_directory/unmarshall"
 import * as _i_in from "../../../../../interface/generated/pareto/core/astn_source"
 import * as _i_out from "../../../../../interface/generated/pareto/schemas/read_directory/data_types/target"
+import * as _i_r_path from "../path/unmarshall"
 
 
-export const Path: _i_signatures._T_Path = ($, $p) => _i_generic.process_group(
-    $,
-    {
-        'properties': ($) => ({
-            'path': _pa.cc(_i_generic.get_entry(
-                $,
-                {
-                    'key': "path",
-                }
-            ), ($) => _i_generic.process_text(
-                $,
-                null
-            )),
-            'escape spaces in path': _pa.cc(_i_generic.get_entry(
-                $,
-                {
-                    'key': "escape spaces in path",
-                }
-            ), ($) => _i_generic.process_boolean(
-                $,
-                {
-                    'deserializer': $p['value deserializers']['boolean'],
-                }
-            )),
-        }),
-    }
-)
 export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_generic.process_group(
     $,
     {
@@ -43,7 +17,7 @@ export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_generic.pro
                 {
                     'key': "path",
                 }
-            ), ($) => Path(
+            ), ($) => _i_r_path.Node_Path_Parameter(
                 $,
                 {
                     'value deserializers': $p['value deserializers'],
@@ -89,21 +63,34 @@ export const Result: _i_signatures._T_Result = ($, $p) => _i_generic.process_unc
             $,
             {
                 'properties': ($) => ({
-                    'concatenated path': _pa.cc(_i_generic.get_entry(
-                        $,
-                        {
-                            'key': "concatenated path",
-                        }
-                    ), ($) => _i_generic.process_text(
-                        $,
-                        null
-                    )),
                     'node type': _pa.cc(_i_generic.get_entry(
                         $,
                         {
                             'key': "node type",
                         }
                     ), ($) => Node_Type(
+                        $,
+                        {
+                            'value deserializers': $p['value deserializers'],
+                        }
+                    )),
+                    'context directory': _pa.cc(_i_generic.get_entry(
+                        $,
+                        {
+                            'key': "context directory",
+                        }
+                    ), ($) => _i_r_path.Context_Path(
+                        $,
+                        {
+                            'value deserializers': $p['value deserializers'],
+                        }
+                    )),
+                    'path': _pa.cc(_i_generic.get_entry(
+                        $,
+                        {
+                            'key': "path",
+                        }
+                    ), ($) => _i_r_path.Node_Path(
                         $,
                         {
                             'value deserializers': $p['value deserializers'],

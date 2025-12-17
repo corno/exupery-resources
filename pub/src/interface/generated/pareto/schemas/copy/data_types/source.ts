@@ -1,17 +1,13 @@
 import * as _et from 'exupery-core-types'
 
 import * as _i_core from "../../../core/resolved"
+import * as _i_imports_path from "../../path/data_types/source"
 
 // **** TYPES
 
-export type _T_Path = {
-    readonly 'path': string
-    readonly 'escape spaces in path': boolean
-}
-
 export type _T_Parameters = {
-    readonly 'source': _T_Path
-    readonly 'target': _T_Path
+    readonly 'source': _i_imports_path._T_Node_Path_Parameter
+    readonly 'target': _i_imports_path._T_Node_Path_Parameter
     readonly 'options': {
         readonly 'recursive': _et.Optional_Value<boolean>
         readonly 'force': _et.Optional_Value<boolean>
@@ -29,28 +25,21 @@ export type _T_Error = _i_core._T_State_Group<null,
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
 
-export type Path = _T_Path
-
 export type Parameters = _T_Parameters
 
 export type Error = _T_Error
 
 // **** ALIASES FOR NESTED TYPE WITH PREFIXED ROOT NAMES
 
-export namespace _T_Path {
-    export type path = string
-    export type escape_spaces_in_path = boolean
-}
-
 export namespace _T_Parameters {
     
     export namespace source {
     }
-    export type source = _T_Path
+    export type source = _i_imports_path._T_Node_Path_Parameter
     
     export namespace target {
     }
-    export type target = _T_Path
+    export type target = _i_imports_path._T_Node_Path_Parameter
     
     export namespace options {
         
@@ -95,20 +84,15 @@ export namespace _T_Error {
 
 // *** ALIASES FOR NESTED TYPES
 
-export namespace Path {
-    export type path = string
-    export type escape_spaces_in_path = boolean
-}
-
 export namespace Parameters {
     
     export namespace source {
     }
-    export type source = _T_Path
+    export type source = _i_imports_path._T_Node_Path_Parameter
     
     export namespace target {
     }
-    export type target = _T_Path
+    export type target = _i_imports_path._T_Node_Path_Parameter
     
     export namespace options {
         

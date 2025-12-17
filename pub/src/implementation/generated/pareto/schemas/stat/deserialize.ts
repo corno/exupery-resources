@@ -3,9 +3,9 @@ import * as _pd from 'exupery-core-dev'
 
 import * as _i_signatures from "../../../../../interface/generated/pareto/schemas/stat/deserialize"
 import * as _i_out from "../../../../../interface/generated/pareto/schemas/stat/data_types/target"
+import * as _i_r_path from "../path/deserialize"
 
 
-export const Path: _i_signatures._T_Path = ($, $p) => _pd.implement_me()
 export const Parameters: _i_signatures._T_Parameters = ($, $p) => _pd.implement_me()
 export const Error: _i_signatures._T_Error = ($, $p) => _pd.implement_me()
 export const Node_Type: _i_signatures._T_Node_Type = ($, $p) => _pd.implement_me()

@@ -1,16 +1,12 @@
 import * as _et from 'exupery-core-types'
 
 import * as _i_core from "../../../core/resolved"
+import * as _i_imports_path from "../../path/data_types/source"
 
 // **** TYPES
 
-export type _T_Path = {
-    readonly 'path': string
-    readonly 'escape spaces in path': boolean
-}
-
 export type _T_Parameters = {
-    readonly 'path': _T_Path
+    readonly 'path': _i_imports_path._T_Node_Path_Parameter
 }
 
 export type _T_Error = _i_core._T_State_Group<null, 
@@ -24,13 +20,12 @@ export type _T_Node_Type = _i_core._T_State_Group<null,
 >
 
 export type _T_Result = _i_core._T_Dictionary<null, {
-    readonly 'concatenated path': string
     readonly 'node type': _T_Node_Type
+    readonly 'context directory': _i_imports_path._T_Context_Path
+    readonly 'path': _i_imports_path._T_Node_Path
 }>
 
 // **** FRIENDLY NAMES FOR THE GLOBAL TYPES
-
-export type Path = _T_Path
 
 export type Parameters = _T_Parameters
 
@@ -42,16 +37,11 @@ export type Result = _T_Result
 
 // **** ALIASES FOR NESTED TYPE WITH PREFIXED ROOT NAMES
 
-export namespace _T_Path {
-    export type path = string
-    export type escape_spaces_in_path = boolean
-}
-
 export namespace _T_Parameters {
     
     export namespace path {
     }
-    export type path = _T_Path
+    export type path = _i_imports_path._T_Node_Path_Parameter
 }
 
 export namespace _T_Error {
@@ -79,30 +69,33 @@ export namespace _T_Node_Type {
 export namespace _T_Result {
     
     export namespace D {
-        export type concatenated_path = string
         
         export namespace node_type {
         }
         export type node_type = _T_Node_Type
+        
+        export namespace context_directory {
+        }
+        export type context_directory = _i_imports_path._T_Context_Path
+        
+        export namespace path {
+        }
+        export type path = _i_imports_path._T_Node_Path
     }
     export type D = {
-        readonly 'concatenated path': string
         readonly 'node type': _T_Node_Type
+        readonly 'context directory': _i_imports_path._T_Context_Path
+        readonly 'path': _i_imports_path._T_Node_Path
     }
 }
 
 // *** ALIASES FOR NESTED TYPES
 
-export namespace Path {
-    export type path = string
-    export type escape_spaces_in_path = boolean
-}
-
 export namespace Parameters {
     
     export namespace path {
     }
-    export type path = _T_Path
+    export type path = _i_imports_path._T_Node_Path_Parameter
 }
 
 export namespace Error {
@@ -130,14 +123,22 @@ export namespace Node_Type {
 export namespace Result {
     
     export namespace D {
-        export type concatenated_path = string
         
         export namespace node_type {
         }
         export type node_type = _T_Node_Type
+        
+        export namespace context_directory {
+        }
+        export type context_directory = _i_imports_path._T_Context_Path
+        
+        export namespace path {
+        }
+        export type path = _i_imports_path._T_Node_Path
     }
     export type D = {
-        readonly 'concatenated path': string
         readonly 'node type': _T_Node_Type
+        readonly 'context directory': _i_imports_path._T_Context_Path
+        readonly 'path': _i_imports_path._T_Node_Path
     }
 }

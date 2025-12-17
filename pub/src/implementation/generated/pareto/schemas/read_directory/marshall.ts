@@ -3,23 +3,11 @@ import * as _pd from 'exupery-core-dev'
 
 import * as _i_signatures from "../../../../../interface/generated/pareto/schemas/read_directory/marshall"
 import * as _i_out from "../../../../../interface/generated/pareto/core/astn_target"
+import * as _i_r_path from "../path/marshall"
 
 
-export const Path: _i_signatures._T_Path = ($, $p) => ['verbose group', _pa.dictionary_literal({
-    'path': _pa.cc($['path'], ($) => ['text', ({
-        'delimiter': ['quote', null],
-        'value': $,
-    })]),
-    'escape spaces in path': _pa.cc($['escape spaces in path'], ($) => ['text', ({
-        'delimiter': ['backtick', null],
-        'value': $p['value serializers']['boolean'](
-            $,
-            null
-        ),
-    })]),
-})]
 export const Parameters: _i_signatures._T_Parameters = ($, $p) => ['verbose group', _pa.dictionary_literal({
-    'path': _pa.cc($['path'], ($) => Path(
+    'path': _pa.cc($['path'], ($) => _i_r_path.Node_Path_Parameter(
         $,
         {
             'value serializers': $p['value serializers'],
@@ -53,11 +41,19 @@ export const Node_Type: _i_signatures._T_Node_Type = ($, $p) => ['state', _pa.cc
     }
 })]
 export const Result: _i_signatures._T_Result = ($, $p) => ['dictionary', $.map(($) => ['verbose group', _pa.dictionary_literal({
-    'concatenated path': _pa.cc($['concatenated path'], ($) => ['text', ({
-        'delimiter': ['quote', null],
-        'value': $,
-    })]),
     'node type': _pa.cc($['node type'], ($) => Node_Type(
+        $,
+        {
+            'value serializers': $p['value serializers'],
+        }
+    )),
+    'context directory': _pa.cc($['context directory'], ($) => _i_r_path.Context_Path(
+        $,
+        {
+            'value serializers': $p['value serializers'],
+        }
+    )),
+    'path': _pa.cc($['path'], ($) => _i_r_path.Node_Path(
         $,
         {
             'value serializers': $p['value serializers'],
