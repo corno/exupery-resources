@@ -6,7 +6,7 @@ import * as _i_imports_path from "../../path/data_types/target"
 // **** TYPES
 
 export type _T_Parameters = {
-    readonly 'path': _i_imports_path._T_Node_Path_Parameter
+    readonly 'path': _i_imports_path._T_Node_Path
 }
 
 export type _T_Error = _i_core._T_State_Group<null, 
@@ -17,6 +17,7 @@ export type _T_Error = _i_core._T_State_Group<null,
 export type _T_Node_Type = _i_core._T_State_Group<null, 
     | readonly ['file', null]
     | readonly ['directory', null]
+    | readonly ['other', null]
 >
 
 export type _T_Result = _i_core._T_Dictionary<null, {
@@ -41,7 +42,7 @@ export namespace _T_Parameters {
     
     export namespace path {
     }
-    export type path = _i_imports_path._T_Node_Path_Parameter
+    export type path = _i_imports_path._T_Node_Path
 }
 
 export namespace _T_Error {
@@ -60,10 +61,12 @@ export namespace _T_Node_Type {
     export namespace SG {
         export type file = null
         export type directory = null
+        export type other = null
     }
     export type SG = 
         | readonly ['file', null]
         | readonly ['directory', null]
+        | readonly ['other', null]
 }
 
 export namespace _T_Result {
@@ -95,7 +98,7 @@ export namespace Parameters {
     
     export namespace path {
     }
-    export type path = _i_imports_path._T_Node_Path_Parameter
+    export type path = _i_imports_path._T_Node_Path
 }
 
 export namespace Error {
@@ -114,10 +117,12 @@ export namespace Node_Type {
     export namespace SG {
         export type file = null
         export type directory = null
+        export type other = null
     }
     export type SG = 
         | readonly ['file', null]
         | readonly ['directory', null]
+        | readonly ['other', null]
 }
 
 export namespace Result {

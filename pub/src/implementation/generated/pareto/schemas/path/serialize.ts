@@ -46,22 +46,6 @@ export const Node_Path: _i_signatures._T_Node_Path = ($, $p) => _i_serialize.Doc
         }
     )
 )
-export const Node_Path_Parameter: _i_signatures._T_Node_Path_Parameter = ($, $p) => _i_serialize.Document(
-    _i_marshall.Node_Path_Parameter(
-        $,
-        {
-            'value serializers': $p['value serializers'],
-        }
-    )
-)
-export const Context_Path_Parameter: _i_signatures._T_Context_Path_Parameter = ($, $p) => _i_serialize.Document(
-    _i_marshall.Context_Path_Parameter(
-        $,
-        {
-            'value serializers': $p['value serializers'],
-        }
-    )
-)
 export const Non_Normalized_Path: _i_signatures._T_Non_Normalized_Path = ($, $p) => _i_serialize.Document(
     _i_marshall.Non_Normalized_Path(
         $,

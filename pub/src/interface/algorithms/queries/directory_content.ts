@@ -7,6 +7,7 @@ import * as d_path from "../../generated/pareto/schemas/path/data_types/source"
 
 
 export type Node =
+    | ['other', null]
     | ['file', string]
     | ['directory', Directory]
 

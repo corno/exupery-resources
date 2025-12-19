@@ -25,16 +25,6 @@ export type _T_Node_Path = {
     readonly 'node': string
 }
 
-export type _T_Node_Path_Parameter = {
-    readonly 'path': _T_Node_Path
-    readonly 'escape spaces in path': boolean
-}
-
-export type _T_Context_Path_Parameter = {
-    readonly 'path': _T_Context_Path
-    readonly 'escape spaces in path': boolean
-}
-
 export type _T_Non_Normalized_Path = {
     readonly 'leading slash': boolean
     readonly 'segments': _i_core._T_List<null, _i_core._T_State_Group<null, 
@@ -57,10 +47,6 @@ export type Context_Subpath = _T_Context_Subpath
 export type Context_Path = _T_Context_Path
 
 export type Node_Path = _T_Node_Path
-
-export type Node_Path_Parameter = _T_Node_Path_Parameter
-
-export type Context_Path_Parameter = _T_Context_Path_Parameter
 
 export type Non_Normalized_Path = _T_Non_Normalized_Path
 
@@ -109,22 +95,6 @@ export namespace _T_Node_Path {
     }
     export type context = _T_Context_Path
     export type node = string
-}
-
-export namespace _T_Node_Path_Parameter {
-    
-    export namespace path {
-    }
-    export type path = _T_Node_Path
-    export type escape_spaces_in_path = boolean
-}
-
-export namespace _T_Context_Path_Parameter {
-    
-    export namespace path {
-    }
-    export type path = _T_Context_Path
-    export type escape_spaces_in_path = boolean
 }
 
 export namespace _T_Non_Normalized_Path {
@@ -207,22 +177,6 @@ export namespace Node_Path {
     }
     export type context = _T_Context_Path
     export type node = string
-}
-
-export namespace Node_Path_Parameter {
-    
-    export namespace path {
-    }
-    export type path = _T_Node_Path
-    export type escape_spaces_in_path = boolean
-}
-
-export namespace Context_Path_Parameter {
-    
-    export namespace path {
-    }
-    export type path = _T_Context_Path
-    export type escape_spaces_in_path = boolean
 }
 
 export namespace Non_Normalized_Path {

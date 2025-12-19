@@ -6,7 +6,7 @@ import * as _i_imports_path from "../../path/data_types/target"
 // **** TYPES
 
 export type _T_Parameters = {
-    readonly 'path': _i_imports_path._T_Node_Path_Parameter
+    readonly 'path': _i_imports_path._T_Node_Path
     readonly 'error if not exists': boolean
 }
 
@@ -27,7 +27,7 @@ export namespace _T_Parameters {
     
     export namespace path {
     }
-    export type path = _i_imports_path._T_Node_Path_Parameter
+    export type path = _i_imports_path._T_Node_Path
     export type error_if_not_exists = boolean
 }
 
@@ -48,7 +48,7 @@ export namespace Parameters {
     
     export namespace path {
     }
-    export type path = _i_imports_path._T_Node_Path_Parameter
+    export type path = _i_imports_path._T_Node_Path
     export type error_if_not_exists = boolean
 }
 

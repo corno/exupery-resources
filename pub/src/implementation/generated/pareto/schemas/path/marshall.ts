@@ -62,36 +62,6 @@ export const Node_Path: _i_signatures._T_Node_Path = ($, $p) => ['verbose group'
         'value': $,
     })]),
 })]
-export const Node_Path_Parameter: _i_signatures._T_Node_Path_Parameter = ($, $p) => ['verbose group', _pa.dictionary_literal({
-    'path': _pa.cc($['path'], ($) => Node_Path(
-        $,
-        {
-            'value serializers': $p['value serializers'],
-        }
-    )),
-    'escape spaces in path': _pa.cc($['escape spaces in path'], ($) => ['text', ({
-        'delimiter': ['backtick', null],
-        'value': $p['value serializers']['boolean'](
-            $,
-            null
-        ),
-    })]),
-})]
-export const Context_Path_Parameter: _i_signatures._T_Context_Path_Parameter = ($, $p) => ['verbose group', _pa.dictionary_literal({
-    'path': _pa.cc($['path'], ($) => Context_Path(
-        $,
-        {
-            'value serializers': $p['value serializers'],
-        }
-    )),
-    'escape spaces in path': _pa.cc($['escape spaces in path'], ($) => ['text', ({
-        'delimiter': ['backtick', null],
-        'value': $p['value serializers']['boolean'](
-            $,
-            null
-        ),
-    })]),
-})]
 export const Non_Normalized_Path: _i_signatures._T_Non_Normalized_Path = ($, $p) => ['verbose group', _pa.dictionary_literal({
     'leading slash': _pa.cc($['leading slash'], ($) => ['text', ({
         'delimiter': ['backtick', null],

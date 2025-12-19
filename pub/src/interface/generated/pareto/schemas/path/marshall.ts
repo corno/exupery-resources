@@ -41,20 +41,6 @@ export type _T_Node_Path = (
     },
 ) => _i_out._T_Value
 
-export type _T_Node_Path_Parameter = (
-    $$_: _i_in._T_Node_Path_Parameter,
-    $$_p: {
-        readonly 'value serializers': _i_vs._T_Value_Serializers
-    },
-) => _i_out._T_Value
-
-export type _T_Context_Path_Parameter = (
-    $$_: _i_in._T_Context_Path_Parameter,
-    $$_p: {
-        readonly 'value serializers': _i_vs._T_Value_Serializers
-    },
-) => _i_out._T_Value
-
 export type _T_Non_Normalized_Path = (
     $$_: _i_in._T_Non_Normalized_Path,
     $$_p: {
@@ -73,10 +59,6 @@ export type Context_Subpath = _T_Context_Subpath
 export type Context_Path = _T_Context_Path
 
 export type Node_Path = _T_Node_Path
-
-export type Node_Path_Parameter = _T_Node_Path_Parameter
-
-export type Context_Path_Parameter = _T_Context_Path_Parameter
 
 export type Non_Normalized_Path = _T_Non_Normalized_Path
 
@@ -159,42 +141,6 @@ export namespace _T_Node_Path {
     export namespace CONTEXT {
     }
     export type CONTEXT = _i_in._T_Node_Path
-    
-    export namespace PARAMS {
-        
-        export namespace value_serializers {
-        }
-        export type value_serializers = _i_vs._T_Value_Serializers
-    }
-    
-    export namespace RESULT {
-    }
-    export type RESULT = _i_out._T_Value
-}
-
-export namespace _T_Node_Path_Parameter {
-    
-    export namespace CONTEXT {
-    }
-    export type CONTEXT = _i_in._T_Node_Path_Parameter
-    
-    export namespace PARAMS {
-        
-        export namespace value_serializers {
-        }
-        export type value_serializers = _i_vs._T_Value_Serializers
-    }
-    
-    export namespace RESULT {
-    }
-    export type RESULT = _i_out._T_Value
-}
-
-export namespace _T_Context_Path_Parameter {
-    
-    export namespace CONTEXT {
-    }
-    export type CONTEXT = _i_in._T_Context_Path_Parameter
     
     export namespace PARAMS {
         
@@ -305,42 +251,6 @@ export namespace Node_Path {
     export namespace CONTEXT {
     }
     export type CONTEXT = _i_in._T_Node_Path
-    
-    export namespace PARAMS {
-        
-        export namespace value_serializers {
-        }
-        export type value_serializers = _i_vs._T_Value_Serializers
-    }
-    
-    export namespace RESULT {
-    }
-    export type RESULT = _i_out._T_Value
-}
-
-export namespace Node_Path_Parameter {
-    
-    export namespace CONTEXT {
-    }
-    export type CONTEXT = _i_in._T_Node_Path_Parameter
-    
-    export namespace PARAMS {
-        
-        export namespace value_serializers {
-        }
-        export type value_serializers = _i_vs._T_Value_Serializers
-    }
-    
-    export namespace RESULT {
-    }
-    export type RESULT = _i_out._T_Value
-}
-
-export namespace Context_Path_Parameter {
-    
-    export namespace CONTEXT {
-    }
-    export type CONTEXT = _i_in._T_Context_Path_Parameter
     
     export namespace PARAMS {
         

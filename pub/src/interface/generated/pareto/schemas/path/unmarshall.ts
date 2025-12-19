@@ -41,20 +41,6 @@ export type _T_Node_Path = (
     },
 ) => _i_out._T_Node_Path
 
-export type _T_Node_Path_Parameter = (
-    $$_: _i_in._T_Value,
-    $$_p: {
-        readonly 'value deserializers': _i_vd._T_Value_Deserializers
-    },
-) => _i_out._T_Node_Path_Parameter
-
-export type _T_Context_Path_Parameter = (
-    $$_: _i_in._T_Value,
-    $$_p: {
-        readonly 'value deserializers': _i_vd._T_Value_Deserializers
-    },
-) => _i_out._T_Context_Path_Parameter
-
 export type _T_Non_Normalized_Path = (
     $$_: _i_in._T_Value,
     $$_p: {
@@ -73,10 +59,6 @@ export type Context_Subpath = _T_Context_Subpath
 export type Context_Path = _T_Context_Path
 
 export type Node_Path = _T_Node_Path
-
-export type Node_Path_Parameter = _T_Node_Path_Parameter
-
-export type Context_Path_Parameter = _T_Context_Path_Parameter
 
 export type Non_Normalized_Path = _T_Non_Normalized_Path
 
@@ -170,42 +152,6 @@ export namespace _T_Node_Path {
     export namespace RESULT {
     }
     export type RESULT = _i_out._T_Node_Path
-}
-
-export namespace _T_Node_Path_Parameter {
-    
-    export namespace CONTEXT {
-    }
-    export type CONTEXT = _i_in._T_Value
-    
-    export namespace PARAMS {
-        
-        export namespace value_deserializers {
-        }
-        export type value_deserializers = _i_vd._T_Value_Deserializers
-    }
-    
-    export namespace RESULT {
-    }
-    export type RESULT = _i_out._T_Node_Path_Parameter
-}
-
-export namespace _T_Context_Path_Parameter {
-    
-    export namespace CONTEXT {
-    }
-    export type CONTEXT = _i_in._T_Value
-    
-    export namespace PARAMS {
-        
-        export namespace value_deserializers {
-        }
-        export type value_deserializers = _i_vd._T_Value_Deserializers
-    }
-    
-    export namespace RESULT {
-    }
-    export type RESULT = _i_out._T_Context_Path_Parameter
 }
 
 export namespace _T_Non_Normalized_Path {
@@ -316,42 +262,6 @@ export namespace Node_Path {
     export namespace RESULT {
     }
     export type RESULT = _i_out._T_Node_Path
-}
-
-export namespace Node_Path_Parameter {
-    
-    export namespace CONTEXT {
-    }
-    export type CONTEXT = _i_in._T_Value
-    
-    export namespace PARAMS {
-        
-        export namespace value_deserializers {
-        }
-        export type value_deserializers = _i_vd._T_Value_Deserializers
-    }
-    
-    export namespace RESULT {
-    }
-    export type RESULT = _i_out._T_Node_Path_Parameter
-}
-
-export namespace Context_Path_Parameter {
-    
-    export namespace CONTEXT {
-    }
-    export type CONTEXT = _i_in._T_Value
-    
-    export namespace PARAMS {
-        
-        export namespace value_deserializers {
-        }
-        export type value_deserializers = _i_vd._T_Value_Deserializers
-    }
-    
-    export namespace RESULT {
-    }
-    export type RESULT = _i_out._T_Context_Path_Parameter
 }
 
 export namespace Non_Normalized_Path {

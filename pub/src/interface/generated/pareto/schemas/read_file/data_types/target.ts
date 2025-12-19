@@ -5,7 +5,7 @@ import * as _i_imports_path from "../../path/data_types/target"
 
 // **** TYPES
 
-export type _T_Parameters = _i_imports_path._T_Node_Path_Parameter
+export type _T_Parameters = _i_imports_path._T_Node_Path
 
 export type _T_Error = _i_core._T_State_Group<null, 
     | readonly ['file does not exist', null]

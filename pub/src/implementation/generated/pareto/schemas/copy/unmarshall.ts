@@ -17,7 +17,7 @@ export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_generic.pro
                 {
                     'key': "source",
                 }
-            ), ($) => _i_r_path.Node_Path_Parameter(
+            ), ($) => _i_r_path.Node_Path(
                 $,
                 {
                     'value deserializers': $p['value deserializers'],
@@ -28,7 +28,7 @@ export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_generic.pro
                 {
                     'key': "target",
                 }
-            ), ($) => _i_r_path.Node_Path_Parameter(
+            ), ($) => _i_r_path.Node_Path(
                 $,
                 {
                     'value deserializers': $p['value deserializers'],

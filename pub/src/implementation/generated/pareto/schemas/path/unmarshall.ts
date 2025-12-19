@@ -107,64 +107,6 @@ export const Node_Path: _i_signatures._T_Node_Path = ($, $p) => _i_generic.proce
         }),
     }
 )
-export const Node_Path_Parameter: _i_signatures._T_Node_Path_Parameter = ($, $p) => _i_generic.process_group(
-    $,
-    {
-        'properties': ($) => ({
-            'path': _pa.cc(_i_generic.get_entry(
-                $,
-                {
-                    'key': "path",
-                }
-            ), ($) => Node_Path(
-                $,
-                {
-                    'value deserializers': $p['value deserializers'],
-                }
-            )),
-            'escape spaces in path': _pa.cc(_i_generic.get_entry(
-                $,
-                {
-                    'key': "escape spaces in path",
-                }
-            ), ($) => _i_generic.process_boolean(
-                $,
-                {
-                    'deserializer': $p['value deserializers']['boolean'],
-                }
-            )),
-        }),
-    }
-)
-export const Context_Path_Parameter: _i_signatures._T_Context_Path_Parameter = ($, $p) => _i_generic.process_group(
-    $,
-    {
-        'properties': ($) => ({
-            'path': _pa.cc(_i_generic.get_entry(
-                $,
-                {
-                    'key': "path",
-                }
-            ), ($) => Context_Path(
-                $,
-                {
-                    'value deserializers': $p['value deserializers'],
-                }
-            )),
-            'escape spaces in path': _pa.cc(_i_generic.get_entry(
-                $,
-                {
-                    'key': "escape spaces in path",
-                }
-            ), ($) => _i_generic.process_boolean(
-                $,
-                {
-                    'deserializer': $p['value deserializers']['boolean'],
-                }
-            )),
-        }),
-    }
-)
 export const Non_Normalized_Path: _i_signatures._T_Non_Normalized_Path = ($, $p) => _i_generic.process_group(
     $,
     {

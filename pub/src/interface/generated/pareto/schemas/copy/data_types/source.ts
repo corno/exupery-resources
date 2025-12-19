@@ -6,8 +6,8 @@ import * as _i_imports_path from "../../path/data_types/source"
 // **** TYPES
 
 export type _T_Parameters = {
-    readonly 'source': _i_imports_path._T_Node_Path_Parameter
-    readonly 'target': _i_imports_path._T_Node_Path_Parameter
+    readonly 'source': _i_imports_path._T_Node_Path
+    readonly 'target': _i_imports_path._T_Node_Path
     readonly 'options': {
         readonly 'recursive': _et.Optional_Value<boolean>
         readonly 'force': _et.Optional_Value<boolean>
@@ -35,11 +35,11 @@ export namespace _T_Parameters {
     
     export namespace source {
     }
-    export type source = _i_imports_path._T_Node_Path_Parameter
+    export type source = _i_imports_path._T_Node_Path
     
     export namespace target {
     }
-    export type target = _i_imports_path._T_Node_Path_Parameter
+    export type target = _i_imports_path._T_Node_Path
     
     export namespace options {
         
@@ -88,11 +88,11 @@ export namespace Parameters {
     
     export namespace source {
     }
-    export type source = _i_imports_path._T_Node_Path_Parameter
+    export type source = _i_imports_path._T_Node_Path
     
     export namespace target {
     }
-    export type target = _i_imports_path._T_Node_Path_Parameter
+    export type target = _i_imports_path._T_Node_Path
     
     export namespace options {
         

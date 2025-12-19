@@ -6,7 +6,7 @@ import * as _i_out from "../../../../../interface/generated/pareto/core/astn_tar
 import * as _i_r_path from "../path/marshall"
 
 
-export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_r_path.Node_Path_Parameter(
+export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_r_path.Node_Path(
     $,
     {
         'value serializers': $p['value serializers'],

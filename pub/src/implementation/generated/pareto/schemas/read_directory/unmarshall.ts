@@ -17,7 +17,7 @@ export const Parameters: _i_signatures._T_Parameters = ($, $p) => _i_generic.pro
                 {
                     'key': "path",
                 }
-            ), ($) => _i_r_path.Node_Path_Parameter(
+            ), ($) => _i_r_path.Node_Path(
                 $,
                 {
                     'value deserializers': $p['value deserializers'],
@@ -50,6 +50,10 @@ export const Node_Type: _i_signatures._T_Node_Type = ($, $p) => _i_generic.proce
                 null
             )],
             'directory': ($): _i_out._T_Node_Type.SG => ['directory', _i_generic.process_nothing(
+                $,
+                null
+            )],
+            'other': ($): _i_out._T_Node_Type.SG => ['other', _i_generic.process_nothing(
                 $,
                 null
             )],
