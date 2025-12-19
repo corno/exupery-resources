@@ -12,11 +12,6 @@ export type Node =
 
 export type Directory = _et.Dictionary<Node>
 
-export type Directory_Pair = {
-    'top': Directory,
-    'bottom': Directory,
-}
-
 
 export type Parameters = {
     'path': d_path.Node_Path,
