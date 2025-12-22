@@ -18,7 +18,7 @@ export const Error: Error = ($) => {
                     sh.g.nested_block([
                         sh.b.snippet(`exit code: `),
                         sh.b.snippet($['exit code'].transform(
-                            ($) => `${$}`,
+                            ($) => `${$}`, //this is a number converted to a string
                             () => `n/a`
                         ))
                     ]),
