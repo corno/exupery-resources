@@ -1,6 +1,6 @@
 {
   "name": "exupery-resources",
-  "version": "0.3.40",
+  "version": "0.3.41",
   "description": "A library providing resources forthe Exupery programming Language",
   "main": "./dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,6 +11,6 @@
     "exupery-core-alg": "^0.5.15",
     "exupery-core-async": "^0.3.75",
     "exupery-core-dev": "^0.3.3",
-    "pareto-fountain-pen": "^0.3.13"
+    "pareto-fountain-pen": "^0.3.14"
   }
 }
