@@ -1,7 +1,7 @@
 import * as _ea from 'exupery-core-alg'
 import * as _et from 'exupery-core-types'
 
-import * as d_in from "../../../interface/algorithms/queries/directory_content"
+import * as d_in from "../../../interface/algorithms/queries/read_directory_content"
 import * as d_out from "pareto-fountain-pen/dist/interface/generated/pareto/schemas/block/data_types/target"
 
 import * as t_read_directory_to_fountain_pen from "../read_directory/fountain_pen"
