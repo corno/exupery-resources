@@ -4,9 +4,9 @@ import * as _eb from 'exupery-core-bin'
 import * as _ed from 'exupery-core-dev'
 import * as _ea from 'exupery-core-alg'
 
-import * as r_non_normalized_path from "pub/dist/implementation/refiners/non_normalized_path/text"
+import * as r_non_normalized_path from "pub/dist/implementation/deserializers/schemas/non_normalized_path"
 
-import * as r_node_path from "pub/dist/implementation/refiners/node_path/non_normalized_path"
+import * as r_node_path from "pub/dist/implementation/refiners/schemas/node_path/non_normalized_path"
 
 _ed.log_debug_message("BEGIN", () => {})
 
