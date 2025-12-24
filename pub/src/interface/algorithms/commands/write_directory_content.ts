@@ -9,7 +9,7 @@ import * as d_directory_contents from "../../to_be_generated/directory_content"
 
 
 export type Parameters = {
-    'path': d_path.Node_Path,
+    'path': d_path.Context_Path,
     'directory': d_directory_contents.Directory
 }
 
@@ -18,12 +18,12 @@ export type Node_Error =
     | ['directory', Error]
 
 export type Error =
-    | ['make directory', d_make_directory.Error]
-    | ['directory content processing', _et.Dictionary<Node_Error>]
+    // | ['make directory', d_make_directory.Error]
+    | ['directory content', _et.Dictionary<Node_Error>]
 
 
 export type Resources = {
-    'make directory': _et.Command<d_make_directory.Error, d_make_directory.Parameters>
+    // 'make directory': _et.Command<d_make_directory.Error, d_make_directory.Parameters>
     'write file': _et.Command<d_write_file.Error, d_write_file.Parameters>
 
 }

@@ -10,10 +10,10 @@ import * as t_path_to_path from "../transformers/path/path"
 
 export const $$: inf.Signature = _easync.create_command_procedure(
     ($p, $cr, $qr) => [
-        $cr['make directory'].execute(
-            $p.path,
-            ($): inf.Error => ['make directory', $]
-        ),
+        // $cr['make directory'].execute(
+        //     $p.path,
+        //     ($): inf.Error => ['make directory', $]
+        // ),
         _easync.p.dictionary.parallel<d.Node, inf.Error, inf.Node_Error>(
             $p.directory,
             ($, key) => [
@@ -22,20 +22,25 @@ export const $$: inf.Signature = _easync.create_command_procedure(
                         case 'other': return _ea.ss($, ($) => _easync.p.sequence([]))
                         case 'file': return _ea.ss($, ($) => $cr['write file'].execute(
                             {
-                                'path': t_path_to_path.extend_node_path($p.path, { 'addition': key }),
+                                'path': t_path_to_path.create_node_path($p.path, key),
                                 'data': $
                             },
                             ($): inf.Node_Error => ['file', $]
                         ))
-                        case 'directory': return _ea.ss($, ($) => $cr['make directory'].execute(
-                            t_path_to_path.extend_node_path($p.path, { 'addition': key }),
-                            ($): inf.Node_Error => ['directory', ['make directory', $]]
+                        case 'directory': return _ea.ss($, ($) => $$($cr, null).execute(
+                            {
+                                'directory': $,
+                                'path': t_path_to_path.extend_context_path($p.path, { 'addition': _ea.list_literal([key]) }),
+                            },
+                            ($): inf.Node_Error => ['directory', $]
+                            
                         ))
+                            
                         default: return _ea.au($[0])
                     }
                 })
             ],
-            ($): inf.Error => ['directory content processing', $]
+            ($): inf.Error => ['directory content', $]
         )
     ]
 )
