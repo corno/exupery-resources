@@ -7,7 +7,7 @@ import * as d_out from "pareto-fountain-pen/dist/interface/generated/pareto/sche
 import * as t_read_directory_to_fountain_pen from "../read_directory/fountain_pen"
 import * as t_read_file_to_fountain_pen from "../read_file/fountain_pen"
 
-export type Error = _et.Transformer_New<d_in.Error, d_out.Block_Part>
+export type Error = _et.Transformer<d_in.Error, d_out.Block_Part>
 
 import * as sh from "pareto-fountain-pen/dist/shorthands/block"
 
