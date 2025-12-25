@@ -9,7 +9,7 @@ export namespace commands {
     export type write_directory_content = _et.Command_Procedure<
         resources.commands.write_directory_content,
         {
-            // 'make directory': _et.Command<d_make_directory.Error, d_make_directory.Parameters>
+            // 'make directory': resources_exupery.commands.make_directory
             'write file': resources.commands.write_file
 
         },
