@@ -45,7 +45,7 @@ export namespace queries {
  
     export type execute_any_query_executable = _et.Query<d_execute_any_query_executable.Result, d_execute_any_query_executable.Error, d_execute_any_query_executable.Parameters>
     export type execute_query_executable = _et.Query<d_execute_query_executable.Result, d_execute_query_executable.Error, d_execute_query_executable.Parameters>
-    export type get_instream_data =  _et.Query<d_get_instream_data.Result, null, d_get_instream_data.Parameters>
+    export type get_instream_data = _et.Query<d_get_instream_data.Result, null, d_get_instream_data.Parameters>
     export type read_directory = _et.Query<d_read_directory.Result, d_read_directory.Error, d_read_directory.Parameters>
     export type read_directory_content = _et.Query<d_read_directory_content.Result, d_read_directory_content.Error, d_read_directory_content.Parameters>
     export type read_file = _et.Query<d_read_file.Result, d_read_file.Error, d_read_file.Parameters>
