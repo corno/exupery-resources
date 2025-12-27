@@ -24,9 +24,9 @@ export const Node_Error = ($:d_in.Node_Error): d_out.Block_Part => _ea.cc($, ($)
 export const Error: Error = ($) => _ea.cc($, ($) => {
     switch ($[0]) {
         case 'directory content processing': return _ea.ss($, ($) => sh.b.indent([
-            sh.g.sub($.deprecated_to_array(() => 0).map(($) => sh.g.nested_block([
-                sh.b.snippet(`${$.key}: `),
-                Node_Error($.value)
+            sh.g.sub($.to_list(($, key) => sh.g.nested_block([
+                sh.b.snippet(`${key}: `),
+                Node_Error($)
             ])))
         ]))
         case 'read directory': return _ea.ss($, ($) => sh.b.sub([

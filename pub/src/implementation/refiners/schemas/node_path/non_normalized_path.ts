@@ -44,12 +44,12 @@ export const Node_Path = (
             switch ($[0]) {
                 case 'parent': return _ea.ss($, ($) => ({
                     'up_steps': intermediate_result.node === null
-                        ? intermediate_result.subppath.__get_number_of_elements() === 0
+                        ? intermediate_result.subppath.get_number_of_elements() === 0
                             ? intermediate_result.up_steps + 1
                             : intermediate_result.up_steps
                         : intermediate_result.up_steps,
                     'subppath': intermediate_result.node === null
-                        ? intermediate_result.subppath.__get_number_of_elements() === 0
+                        ? intermediate_result.subppath.get_number_of_elements() === 0
                             ? _ea.list_literal([])
                             : remove_last_element(intermediate_result.subppath)
                         : intermediate_result.subppath,

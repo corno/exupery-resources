@@ -3,7 +3,7 @@ import * as _et from 'exupery-core-types'
 import * as _ed from 'exupery-core-dev'
 
 export const remove_last_element = <T>(list: _et.List<T>): _et.List<T> => {
-    const length = list.__get_number_of_elements()
+    const length = list.get_number_of_elements()
     let index = -1
     return _ea.build_list(($i) => {
         list.__for_each(($) => {
