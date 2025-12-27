@@ -5,7 +5,6 @@ import * as _ed from 'exupery-core-dev'
 import * as d_out from "../../../../interface/generated/pareto/schemas/path/data_types/target"
 import * as d_in from "../../../../interface/generated/pareto/schemas/path/data_types/source"
 
-import { $$ as op_append } from "pareto-standard-operations/dist/implementation/operations/pure/list/append_element"
 import { remove_last_element } from "../../../temp/temp_core"
 
 
@@ -59,7 +58,7 @@ export const Node_Path = (
                     'up_steps': intermediate_result.up_steps,
                     'subppath': intermediate_result.node === null
                         ? intermediate_result.subppath
-                        : op_append(intermediate_result.subppath, { element: intermediate_result.node }),
+                        : intermediate_result.subppath.append_element(intermediate_result.node),
                     'node': $,
                 }))
                 case 'current': return _ea.ss($, ($) => intermediate_result)
