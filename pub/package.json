@@ -1,6 +1,6 @@
 {
   "name": "exupery-resources",
-  "version": "0.3.54",
+  "version": "0.3.55",
   "description": "A library providing resources forthe Exupery programming Language",
   "main": "./dist/index.js",
   "types": "dist/index.d.ts",
