@@ -1,7 +1,7 @@
-import * as _et from 'exupery-core-types'
+import * as _pi from 'pareto-core-interface'
 
 export type Parameters = {
-    'arguments': _et.List<string>,
+    'arguments': _pi.List<string>,
 }
 
 export type Error = {

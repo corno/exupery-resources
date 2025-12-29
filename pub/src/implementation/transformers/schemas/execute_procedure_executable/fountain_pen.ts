@@ -1,18 +1,18 @@
-import * as _ea from 'exupery-core-alg'
-import * as _et from 'exupery-core-types'
+import * as _pt from 'pareto-core-transformer'
+import * as _pi from 'pareto-core-interface'
 
 import * as d_in from "../../../../interface/generated/pareto/schemas/execute_procedure_executable/data_types/source"
 import * as d_out from "pareto-fountain-pen/dist/interface/generated/pareto/schemas/block/data_types/target"
 
-export type Error = _et.Transformer<d_in.Error, d_out.Block_Part>
+export type Error = _pi.Transformer<d_in.Error, d_out.Block_Part>
 
 import * as sh from "pareto-fountain-pen/dist/shorthands/block"
 
 export const Error: Error = ($) => {
-    return _ea.cc($, ($) => {
+    return _pt.cc($, ($) => {
         switch ($[0]) {
-            case 'failed to spawn': return _ea.ss($, ($) => sh.b.snippet(`failed to spawn process: ${$.message}`))
-            case 'non zero exit code': return _ea.ss($, ($) => sh.b.sub([
+            case 'failed to spawn': return _pt.ss($, ($) => sh.b.snippet(`failed to spawn process: ${$.message}`))
+            case 'non zero exit code': return _pt.ss($, ($) => sh.b.sub([
                 sh.b.snippet(`non zero exit code:`),
                 sh.b.indent([
                     sh.g.nested_block([
@@ -32,7 +32,7 @@ export const Error: Error = ($) => {
                     ])
                 ])
             ]))
-            default: return _ea.au($[0])
+            default: return _pt.au($[0])
         }
     })
 }

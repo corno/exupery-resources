@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import * as _eb from 'exupery-core-bin'
-import * as _ed from 'exupery-core-dev'
-import * as _ea from 'exupery-core-alg'
+import * as _ed from 'pareto-core-dev'
+import * as _pt from 'pareto-core-transformer'
 
 import * as r_non_normalized_path from "pub/dist/implementation/deserializers/schemas/non_normalized_path"
 
@@ -26,15 +26,15 @@ const $ = r_node_path.Node_Path(
         'pedantic': true,
     },
     ($) => {
-        _ea.deprecated_panic(`aborting due to error: ${$[0]}`)
+        _pt.deprecated_panic(`aborting due to error: ${$[0]}`)
     }
 )
 
-_ea.cc($.context.start, ($) => {
+_pt.cc($.context.start, ($) => {
     switch ($[0]) {
-        case 'absolute': return _ea.ss($, ($) => _ed.log_debug_message(`abs`, () => {}))
-        case 'relative': return _ea.ss($, ($) => _ed.log_debug_message(`rel up steps: ${$['up steps']}`, () => {}))
-        default: return _ea.au($[0])
+        case 'absolute': return _pt.ss($, ($) => _ed.log_debug_message(`abs`, () => {}))
+        case 'relative': return _pt.ss($, ($) => _ed.log_debug_message(`rel up steps: ${$['up steps']}`, () => {}))
+        default: return _pt.au($[0])
     }
 })
 

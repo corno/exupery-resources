@@ -1,4 +1,4 @@
-import * as _et from 'exupery-core-types'
+import * as _pi from 'pareto-core-interface'
 
 import * as d_copy from "./generated/pareto/schemas/copy/data_types/source"
 import * as d_execute_any_command_procedure from "./generated/pareto/schemas/execute_any_procedure_executable/data_types/source"
@@ -25,30 +25,30 @@ import * as d_main from "./to_be_generated/temp_main"
 
 export namespace commands {
 
-    export type copy = _et.Command<d_copy.Error, d_copy.Parameters>
-    export type execute_any_command_executable = _et.Command<d_execute_any_command_procedure.Error, d_execute_any_command_procedure.Parameters>
-    export type execute_any_smelly_command_executable = _et.Command<d_execute_any_smelly_command_procedure.Error, d_execute_any_smelly_command_procedure.Parameters>
-    export type execute_smelly_command_executable = _et.Command<d_execute_smelly_command_procedure.Error, d_execute_smelly_command_procedure.Parameters>
-    export type execute_command_executable = _et.Command<d_execute_command_procedure.Error, d_execute_command_procedure.Parameters>
-    export type log = _et.Command<null, d_log.Parameters>
-    export type log_error = _et.Command<null, d_log_error.Parameters>
-    export type main = _et.Command<d_main.Error, d_main.Parameters>
-    export type make_directory = _et.Command<d_make_directory.Error, d_make_directory.Parameters>
-    export type remove = _et.Command<d_remove.Error, d_remove.Parameters>
-    export type write_directory_content = _et.Command<d_write_directory_content.Error, d_write_directory_content.Parameters>
-    export type write_file = _et.Command<d_write_file.Error, d_write_file.Parameters>
-    export type write_to_stderr = _et.Command<null, d_write_to_stderr.Parameters>
-    export type write_to_stdout = _et.Command<null, d_write_to_stdout.Parameters>
+    export type copy = _pi.Command<d_copy.Error, d_copy.Parameters>
+    export type execute_any_command_executable = _pi.Command<d_execute_any_command_procedure.Error, d_execute_any_command_procedure.Parameters>
+    export type execute_any_smelly_command_executable = _pi.Command<d_execute_any_smelly_command_procedure.Error, d_execute_any_smelly_command_procedure.Parameters>
+    export type execute_smelly_command_executable = _pi.Command<d_execute_smelly_command_procedure.Error, d_execute_smelly_command_procedure.Parameters>
+    export type execute_command_executable = _pi.Command<d_execute_command_procedure.Error, d_execute_command_procedure.Parameters>
+    export type log = _pi.Command<null, d_log.Parameters>
+    export type log_error = _pi.Command<null, d_log_error.Parameters>
+    export type main = _pi.Command<d_main.Error, d_main.Parameters>
+    export type make_directory = _pi.Command<d_make_directory.Error, d_make_directory.Parameters>
+    export type remove = _pi.Command<d_remove.Error, d_remove.Parameters>
+    export type write_directory_content = _pi.Command<d_write_directory_content.Error, d_write_directory_content.Parameters>
+    export type write_file = _pi.Command<d_write_file.Error, d_write_file.Parameters>
+    export type write_to_stderr = _pi.Command<null, d_write_to_stderr.Parameters>
+    export type write_to_stdout = _pi.Command<null, d_write_to_stdout.Parameters>
 }
 
 export namespace queries {
  
-    export type execute_any_query_executable = _et.Query<d_execute_any_query_executable.Result, d_execute_any_query_executable.Error, d_execute_any_query_executable.Parameters>
-    export type execute_query_executable = _et.Query<d_execute_query_executable.Result, d_execute_query_executable.Error, d_execute_query_executable.Parameters>
-    export type get_instream_data = _et.Query<d_get_instream_data.Result, null, d_get_instream_data.Parameters>
-    export type read_directory = _et.Query<d_read_directory.Result, d_read_directory.Error, d_read_directory.Parameters>
-    export type read_directory_content = _et.Query<d_read_directory_content.Result, d_read_directory_content.Error, d_read_directory_content.Parameters>
-    export type read_file = _et.Query<d_read_file.Result, d_read_file.Error, d_read_file.Parameters>
-    export type stat = _et.Query<d_stat.Result, d_stat.Error, d_stat.Parameters>
+    export type execute_any_query_executable = _pi.Query<d_execute_any_query_executable.Result, d_execute_any_query_executable.Error, d_execute_any_query_executable.Parameters>
+    export type execute_query_executable = _pi.Query<d_execute_query_executable.Result, d_execute_query_executable.Error, d_execute_query_executable.Parameters>
+    export type get_instream_data = _pi.Query<d_get_instream_data.Result, null, d_get_instream_data.Parameters>
+    export type read_directory = _pi.Query<d_read_directory.Result, d_read_directory.Error, d_read_directory.Parameters>
+    export type read_directory_content = _pi.Query<d_read_directory_content.Result, d_read_directory_content.Error, d_read_directory_content.Parameters>
+    export type read_file = _pi.Query<d_read_file.Result, d_read_file.Error, d_read_file.Parameters>
+    export type stat = _pi.Query<d_stat.Result, d_stat.Error, d_stat.Parameters>
 
 }

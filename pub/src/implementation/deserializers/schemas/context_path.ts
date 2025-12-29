@@ -1,6 +1,6 @@
-import * as _ea from 'exupery-core-alg'
-import * as _et from 'exupery-core-types'
-import * as _ed from 'exupery-core-dev'
+import * as _pt from 'pareto-core-transformer'
+import * as _pi from 'pareto-core-interface'
+import * as _ed from 'pareto-core-dev'
 
 import * as d_out from "../../../interface/generated/pareto/schemas/path/data_types/target"
 

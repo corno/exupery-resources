@@ -1,5 +1,4 @@
-import * as _et from 'exupery-core-types'
-import * as _easync from 'exupery-core-async'
+import * as _pi from 'pareto-core-interface'
 
 import * as d_read_directory from "../generated/pareto/schemas/read_directory/data_types/source"
 import * as d_read_file from "../generated/pareto/schemas/read_file/data_types/source"
@@ -20,4 +19,4 @@ export type Node_Error =
 
 export type Error =
     | ['read directory', d_read_directory.Error]
-    | ['directory content processing', _et.Dictionary<Node_Error>]
+    | ['directory content processing', _pi.Dictionary<Node_Error>]

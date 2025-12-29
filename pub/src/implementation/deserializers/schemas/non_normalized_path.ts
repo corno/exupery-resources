@@ -1,6 +1,7 @@
-import * as _ea from 'exupery-core-alg'
-import * as _et from 'exupery-core-types'
-import * as _ed from 'exupery-core-dev'
+import * as _pt from 'pareto-core-deserializer'
+import * as _pi from 'pareto-core-interface'
+import * as _pinternals from 'pareto-core-internals'
+import * as _ed from 'pareto-core-dev'
 import { build_list_with_loop, build_text_with_loop } from '../../temp/temp_core'
 
 import * as d_out from "../../../interface/generated/pareto/schemas/path/data_types/target"
@@ -8,7 +9,7 @@ import * as d_out from "../../../interface/generated/pareto/schemas/path/data_ty
 export const Non_Normalized_Path = (
     $: string
 ): d_out.Non_Normalized_Path => {
-    const iterator = _ea.create_iterator(_ea.text_to_character_list($))
+    const iterator = _pt.create_iterator(_pt.text_to_character_list($))
 
     return {
         'leading slash': iterator['get current']().transform(
@@ -23,7 +24,7 @@ export const Non_Normalized_Path = (
             () => false
         ),
         'segments': build_list_with_loop<number, d_out.Non_Normalized_Path.segments.L>(iterator, ($, $i) => {
-            $i['add element'](_ea.cc(
+            $i['add element'](_pinternals.cc(
                 build_text_with_loop(iterator, ($, $i) => {
                     if ($ !== 47) { // '/'
                         $i['add character']($)
@@ -45,7 +46,7 @@ export const Non_Normalized_Path = (
             return iterator['get current']().transform(
                 ($) => {
                     if ($ !== 47) { // '/'
-                        _ea.deprecated_panic(`Expected '/' but got character code ${$}`)
+                        _pinternals.panic(`Expected '/' but got character code ${$}`)
                     }
                     return iterator['look ahead'](1).transform(
                         () => {

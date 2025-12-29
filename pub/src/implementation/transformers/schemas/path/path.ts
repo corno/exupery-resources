@@ -1,23 +1,16 @@
-import * as _et from 'exupery-core-types'
-import * as _ea from 'exupery-core-alg'
+import * as _pi from 'pareto-core-interface'
+import * as _pt from 'pareto-core-transformer'
 
 import * as d_path from "../../../../interface/generated/pareto/schemas/path/data_types/target"
 
 export const extend_context_path = (
     $: d_path.Context_Path,
     $p: {
-        'addition': _et.List<string>
+        'addition': string
     }): d_path.Context_Path => {
     return {
         'start': $.start,
-        'subpath': _ea.build_list(($i) => {
-            $.subpath.__for_each(($) => {
-                $i['add element']($)
-            })
-            $p.addition.__for_each(($) => {
-                $i['add element']($)
-            })
-        })
+        'subpath': $.subpath.append_element($p.addition)
     }
 }
 
@@ -48,7 +41,7 @@ export const deprecated_node_path_to_context_path = (
     return extend_context_path(
         $.context,
         {
-            'addition': _ea.list_literal([$.node])
+            'addition': $.node
         }
     )
 }

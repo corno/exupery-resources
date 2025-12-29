@@ -1,9 +1,8 @@
-import * as _et from 'exupery-core-types'
-import * as _easync from 'exupery-core-async'
+import * as _pi from 'pareto-core-interface'
 
 export type Node =
     | ['other', null]
     | ['file', string]
     | ['directory', Directory]
 
-export type Directory = _et.Dictionary<Node>
+export type Directory = _pi.Dictionary<Node>
