@@ -10,6 +10,6 @@
   "dependencies": {
     "pareto-core-command": "^0.2.5",
     "pareto-core-query": "^0.1.1",
-    "pareto-fountain-pen": "^0.3.19"
+    "pareto-fountain-pen": "^0.3.20"
   }
 }
