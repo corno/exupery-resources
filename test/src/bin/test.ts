@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import * as _eb from 'exupery-core-bin'
 import * as _ed from 'pareto-core-dev'
 import * as _pt from 'pareto-core-transformer'
 
