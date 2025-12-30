@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-import * as _pdev from 'pareto-core-dev'
 import * as _pt from 'pareto-core-transformer'
+import * as _pdev from 'pareto-core-dev'
+import * as _pinternals from 'pareto-core-internals'
 
 import * as r_non_normalized_path from "pub/dist/implementation/deserializers/schemas/non_normalized_path"
 
@@ -25,7 +26,7 @@ const $ = r_node_path.Node_Path(
         'pedantic': true,
     },
     ($) => {
-        _pt.deprecated_panic(`aborting due to error: ${$[0]}`)
+        _pinternals.panic(`aborting due to error: ${$[0]}`)
     }
 )
 
