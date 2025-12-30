@@ -17,13 +17,11 @@ export type Error =
     | ['trailing slash not allowed', null]
     | ['no node', null]
 
-export const Node_Path = (
-    $: d_in.Non_Normalized_Path,
-    $p: {
-        'pedantic': boolean
-    },
-    abort: _pi.Abort<Error>
-): d_out.Node_Path => {
+export namespace signatures {
+    export type Node_Path = _pi.Refiner_With_Parameters<d_out.Node_Path, Error, d_in.Non_Normalized_Path, { 'pedantic': boolean }>
+}
+
+export const Node_Path: signatures.Node_Path = ($, $p, abort) => {
 
     if ($p.pedantic) {
         if ($['trailing slash']) {
@@ -68,7 +66,7 @@ export const Node_Path = (
     })
 
     if (intermediate_result.node === null) {
-        abort(['no node', null])
+        return abort(['no node', null])
     }
     return {
         'context': {

@@ -1,6 +1,5 @@
 import * as _pc from 'pareto-core-command'
 import * as _pt from 'pareto-core-transformer'
-import * as _pi from 'pareto-core-interface'
 import * as _pq from 'pareto-core-query'
 
 import * as d_directory_content from "../../interface/to_be_generated/directory_content"

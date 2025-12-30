@@ -6,6 +6,7 @@ import * as d_out from "pareto-fountain-pen/dist/interface/generated/pareto/sche
 
 export type Error = _pi.Transformer<d_in.Error, d_out.Block_Part>
 
+//shorthands
 import * as sh from "pareto-fountain-pen/dist/shorthands/block"
 
 export const Error: Error = ($) => {
