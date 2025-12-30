@@ -1,7 +1,6 @@
 import * as _pt from 'pareto-core-transformer'
 import * as _pinternals from 'pareto-core-internals'
 import * as _pi from 'pareto-core-interface'
-import * as _ed from 'pareto-core-dev'
 
 export const remove_last_element = <T>(list: _pi.List<T>): _pi.List<T> => {
     const length = list.get_number_of_elements()
